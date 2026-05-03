@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-# CARLA xodr 맵 로드하고 한국식 차선/정지선/횡단보도 debug.draw 로 그려줌.
-# 신호등은 generate_opendrive_world 가 알아서 박아주니까 따로 안 만든다.
-
 import sys
 import os
 import glob
