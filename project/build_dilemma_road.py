@@ -32,7 +32,7 @@ _find_carla_egg()
 import carla
 
 
-# 도로 폭별 스펙 (n=편도 차로 수, lw=차로폭, mw=중앙분리대 폭, sb=정지거리, cw=횡단보도 폭)
+# 도로 폭별 정보 (n=편도 차로 수, lw=차로폭, mw=중앙분리대 폭, sb=정지거리, cw=횡단보도 폭)
 SPECS = {
     12: {"name": "12m_2lane", "n": 1, "lw": 3.25, "mw": 0.0,
          "med": False, "sb": 2.0, "cw": 4.0, "spd": 50,
@@ -56,6 +56,38 @@ C_YELLOW = carla.Color(255, 200, 0)
 C_WHITE = carla.Color(240, 240, 240)
 C_STOP = carla.Color(255, 255, 255)
 C_CW = carla.Color(230, 230, 230)
+
+
+class ChaseCamera:
+    def __init__(self, world, vehicle=None, mode="third_person"):
+        self.world = world
+        self.vehicle = vehicle
+        self.mode = mode
+
+    def set_vehicle(self, vehicle):
+        self.vehicle = vehicle
+
+    def update(self):
+        if self.vehicle is None or not self.vehicle.is_alive:
+            return
+        t = self.vehicle.get_transform()
+        fwd = t.get_forward_vector()
+        spec = self.world.get_spectator()
+
+        if self.mode == "third_person":
+            spec.set_transform(carla.Transform(
+                carla.Location(
+                    x=t.location.x - fwd.x * 15,
+                    y=t.location.y - fwd.y * 15,
+                    z=t.location.z + 8,
+                ),
+                carla.Rotation(pitch=-20, yaw=t.rotation.yaw),
+            ))
+        else:
+            spec.set_transform(carla.Transform(
+                carla.Location(x=t.location.x, y=t.location.y, z=t.location.z + 50),
+                carla.Rotation(pitch=-90),
+            ))
 
 
 class DilemmaZoneRoadBuilder:
@@ -132,7 +164,7 @@ class DilemmaZoneRoadBuilder:
         segs = [(-APPROACH_LEN, -junc), (junc, APPROACH_LEN)]
         solid_zone = 30.0
 
-        # 중앙선 이중실선 (황색)
+        # 중앙선 이중실선 
         gap = 0.15
         tc = T + 0.008
         for off in (-gap / 2, gap / 2):
@@ -140,7 +172,7 @@ class DilemmaZoneRoadBuilder:
                 self._solid("y", off, s, e, tc, C_YELLOW)
                 self._solid("x", off, s, e, tc, C_YELLOW)
 
-        # 차로 구분선: 교차로 근처는 실선, 멀어지면 점선
+        # 차로 구분선
         if n > 1:
             tl = T + 0.005
             for li in range(1, n):
@@ -167,7 +199,6 @@ class DilemmaZoneRoadBuilder:
                 self._solid("y", edge, s, e, te, C_WHITE)
                 self._solid("x", edge, s, e, te, C_WHITE)
 
-        # 횡단보도 - 교차로 끝에서 cw/2 만큼 바깥
         cw = sp["cw"]
         sb = sp["sb"]
         cw_offset = junc + cw / 2
@@ -175,8 +206,7 @@ class DilemmaZoneRoadBuilder:
             center = sign * cw_offset
             self._crosswalk("y", center, -half_road, half_road, cw, C_CW)
             self._crosswalk("x", center, -half_road, half_road, cw, C_CW)
-
-        # 정지선 - 횡단보도 더 바깥쪽
+            
         stopline_offset = junc + cw + sb
         for sign in (-1, 1):
             pos = sign * stopline_offset
@@ -226,7 +256,6 @@ class DilemmaZoneRoadBuilder:
             self.debug.draw_line(a, b, 0.04, color, -1.0)
 
     def _crosswalk(self, axis, center, lane_start, lane_end, cw_width, color):
-        # 지브라 패턴
         stripe_w = 0.45
         gap_w = 0.45
         half_cw = cw_width / 2
@@ -243,7 +272,7 @@ class DilemmaZoneRoadBuilder:
                 self.debug.draw_line(a, b, 0.04, color, -1.0)
             pos += stripe_w + gap_w
 
-    # ----- 신호등 -----
+    #신호등 
 
     def _find_traffic_light(self):
         tls = list(self.world.get_actors().filter("*traffic_light*"))
@@ -272,14 +301,9 @@ class DilemmaZoneRoadBuilder:
             self.selected_intersection["traffic_light_id"] = -1
             print(f"[Builder] no traffic light (found {len(tls)} total)")
 
-    # ----- 좌표/거리 -----
+    #좌표/거리
 
     def _get_stopline_location(self):
-        # south 기준 좌표계: 차량은 -y 쪽에서 +y 방향으로 진입
-        # y = -half_road       차로 끝
-        # y = -junc            교차로 경계 (junc = half_road + 2)
-        # y = -(junc + cw)     횡단보도 너머
-        # y = -(junc + cw+sb)  정지선
         sp = SPECS[self.road_width]
         n, lw, mw = sp["n"], sp["lw"], sp["mw"]
         half_m = mw / 2 if sp["med"] else 0
@@ -302,7 +326,6 @@ class DilemmaZoneRoadBuilder:
         half_road = n * lw + half_m
         junc = half_road + 2
 
-        # 정지선 → 반대편 횡단보도까지 (교차로 통과 거리)
         cross_distance = sp["cw"] + sp["sb"] + 2 * half_road + sp["sb"] + sp["cw"]
 
         yaw_map = {"south": 90.0, "north": -90.0, "west": 0.0, "east": 180.0}
@@ -317,12 +340,10 @@ class DilemmaZoneRoadBuilder:
             "sb_distance": sp["sb"],
         }
 
-    # ----- 판정/제어 -----
+    #판정/제어
 
     def distance_to_stopline(self, vehicle):
-        # 진행 방향 기준 부호 있는 거리.
-        # 양수 = 정지선 못 미침, 음수 = 통과.
-        # 멈춰있을 땐 forward 벡터, 움직이면 속도 벡터를 쓴다 (실제 진행방향이 더 정확).
+
         stopline = self._get_stopline_location()
         v_tf = vehicle.get_transform()
         v_loc = v_tf.location
@@ -340,6 +361,34 @@ class DilemmaZoneRoadBuilder:
         dx = stopline.x - v_loc.x
         dy = stopline.y - v_loc.y
         return dx * fx + dy * fy
+
+    def can_pass_intersection(self, vehicle, yellow_time_s, vehicle_length=4.7):
+        d = self.distance_to_stopline(vehicle)
+        W = self.get_experiment_points()["cross_distance"]
+
+        v_vec = vehicle.get_velocity()
+        v = math.sqrt(v_vec.x ** 2 + v_vec.y ** 2 + v_vec.z ** 2)
+
+        if v < 0.1:
+            return {
+                "can_pass": False,
+                "d_to_stopline": d,
+                "t_cross": float("inf"),
+                "margin": -float("inf"),
+            }
+
+        if d <= 0:
+            #이미 정지선 넘었으면 남은 교차로 거리만 계산
+            t_cross = (W - abs(d) + vehicle_length) / v
+        else:
+            t_cross = (d + W + vehicle_length) / v
+
+        return {
+            "can_pass": t_cross <= yellow_time_s,
+            "d_to_stopline": d,
+            "t_cross": t_cross,
+            "margin": yellow_time_s - t_cross,
+        }
 
     def safe_stop_control(self, vehicle, a_max=7.0, a_comfort=3.4,
                           stop_offset=1.0, target_speed_kmh=50):
@@ -382,7 +431,7 @@ class DilemmaZoneRoadBuilder:
         return carla.VehicleControl(throttle=0.0, brake=float(brake),
                                     steer=0.0, hand_brake=False)
 
-    # ----- 환경/정리 -----
+
 
     def setup_weather(self, condition="dry"):
         if condition == "dry":
@@ -399,7 +448,9 @@ class DilemmaZoneRoadBuilder:
                 sun_altitude_angle=40.0,
             )
         self.world.set_weather(w)
+        
 
+    
     def cleanup(self):
         for a in self.spawned_actors:
             if a.is_alive:
@@ -458,3 +509,4 @@ if __name__ == "__main__":
         pass
     finally:
         builder.disconnect()
+
