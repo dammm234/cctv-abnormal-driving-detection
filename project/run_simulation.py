@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 # CARLA 교차로 충돌위험 예측/대응 알고리즘 시뮬
-# exp 1=전방통과, 2=후방추돌, 3=종합
 
 import sys, os, glob, math, csv, json, time, itertools
 from datetime import datetime
@@ -46,28 +43,25 @@ FIXED_DELTA_SECONDS = 0.05
 MAX_SIM_STEPS = 600
 OUTPUT_DIR = "results"
 
-# === 종방향 제어기 게인 (compute_throttle_brake에서 사용) ===
 FF_BASE = 0.30          # throttle 베이스 (정지마찰 극복)
 FF_SLOPE = 0.003        # km/h당 throttle 가산 (공기저항 보정)
-P_KP = 0.3              # 비례 게인
-P_BRAKE_GAIN = 0.2      # brake 변환 게인 (throttle 대비 약하게)
-P_BRAKE_MAX = 0.5       # brake 상한 (등속 추종용, 급제동은 별도)
+P_KP = 0.3            
+P_BRAKE_GAIN = 0.2      
+P_BRAKE_MAX = 0.5       
 
-# === 알고리즘 마진 (algorithm_predict) ===
 SIG_MARGIN_S = 0.5      # 황색 안전 여유 시간
 DIST_MARGIN_M = 1.5     # 정지선 앞 안전 여유 거리
 
-# === 충돌/정차 판정 ===
+
 COLLISION_GAP_M = 1.5           # 차간 < 이 값이면 추돌
 SAFE_STOP_RADIUS_M = 5.0        # 정지선 반경 이내 정차면 안전
-STATIONARY_KMH = 1.0            # 이 속도 미만이면 정차로 간주
+STATIONARY_KMH = 1.0            #이 속도 미만이면 정차로 간주
 
-# === Sentinel 값 ===
 NO_REAR_GAP = 999.0             # 후방차 없음 표시값
 NO_REAR_GAP_THRESHOLD = 900.0   # 이보다 작으면 후방차 있음
 TRAFFIC_LIGHT_HOLD_S = 999.0    # 신호등 freeze 시간 (사실상 무한)
 
-# === 시뮬 안전장치 ===
+
 EXP2_MAX_STEPS = 200
 EXP3_MAX_STEPS = 400
 EXP3_HARD_BREAK_STEP = 350
@@ -108,7 +102,6 @@ class ScenarioConfig:
 
 @dataclass
 class ScenarioResult:
-    # === 식별 / 입력 조건 (Config에서 복사) ===
     scenario_id: int
     exp: int
     speed_kmh: float
@@ -121,14 +114,14 @@ class ScenarioResult:
     gap_m: float = 0
     rear_type: str = ""
 
-    # === 알고리즘 이론 판정 ===
+    #알고리즘 이론 판정
     theoretical_pass: bool = False
     can_stop_emg: bool = False
     rear_collision_theory: bool = False
     decision: str = ""
     zone: str = ""
 
-    # === 실제 시뮬 결과 ===
+    #실제 시뮬 결과
     pass_before_red: bool = False
     actual_travel_time_s: float = 0
     avg_speed_kmh: float = 0
@@ -143,7 +136,7 @@ class ScenarioResult:
     timestamp: str = ""
     error: str = ""
 
-    # === 딜레마존 분석용 ===
+    #딜레마존 분석용
     stop_overrun_m: float = 0       # 음수=정지선 전, 양수=침범
     dist_to_stopline_m: float = 0
     in_crosswalk: bool = False
@@ -184,7 +177,7 @@ def algorithm_predict(cfg):
         rear_col = closing > 0
     rs = not rear_col
 
-    # 쾌적감속으로 정지 가능?
+    # 쾌적감속으로 정지 가능여부
     d_stop_c = v * t_r + v ** 2 / (2 * a_comf)
     can_stop_c = d >= (d_stop_c + DIST_MARGIN_M)
 
@@ -198,7 +191,7 @@ def algorithm_predict(cfg):
     elif not can_pass and can_stop and rs:
         dec = "급정지"
     elif not can_pass and can_stop and not rs:
-        # 정지가능 + 후방위험. can_pass=False면 진행은 신호위반이라 못함
+        # 정지가능 + 후방위험 can_pass=False면 진행은 신호위반이라 못함
         dec = "감속" if can_stop_c else "급정지"
     elif not can_pass and not can_stop and rs:
         dec = "급정지"
@@ -244,7 +237,6 @@ def generate_scenarios(exp, quick=False):
         rds = [RoadCondition.DRY, RoadCondition.WET]
 
     if exp == 1:
-        # 6중 nested loop를 itertools.product로 단순화 (순서 동일)
         combos = itertools.product(ws, ets, rds, spds, ds, ys)
         for idx, (w, et, rd, v, d, y) in enumerate(combos):
             sc.append(ScenarioConfig(idx, 1, v, d, y, w, rd, et))
@@ -262,7 +254,6 @@ def generate_scenarios(exp, quick=False):
         spds3 = spds if not quick else [40, 50, 60]
         ds3 = ds if not quick else [20, 40, 60]
         idx = 0
-        # 후방 없음/있음 두 케이스를 한 시나리오 페어로 생성
         for (w, et, rd, v, d, y) in itertools.product(ws3, ets, rds, spds3, ds3, ys):
             # 후방 없음
             sc.append(ScenarioConfig(idx, 3, v, d, y, w, rd, et))
@@ -273,6 +264,42 @@ def generate_scenarios(exp, quick=False):
             idx += 1
 
     return sc
+
+
+def load_scenarios_from_json(json_path):
+
+    if not os.path.exists(json_path):
+        print(f"[ERROR] 시나리오 파일이 없습니다: {json_path}")
+        return []
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    sc = []
+    data_sorted = sorted(data, key=lambda s: (s['intersection_width_m'], s['scenario_id']))
+
+    for new_idx, s in enumerate(data_sorted):
+        road_cond = RoadCondition.DRY if s['road_condition'] == 'dry' else RoadCondition.WET
+        rear_speed = s.get('rear_speed_kmh', 0)
+        gap = s.get('gap_m', 999)
+        rear_type = s.get('rear_type', 'sedan') if rear_speed > 0 else 'sedan'
+
+        sc.append(ScenarioConfig(
+            new_idx,                            
+            3,                                 
+            float(s['speed_kmh']),
+            float(s['distance_m']),
+            float(s['yellow_time_s']),
+            float(s['intersection_width_m']),
+            road_cond,
+            s.get('ego_type', 'sedan'),
+            float(rear_speed),
+            float(gap),
+            rear_type
+        ))
+
+    print(f"[INFO] {len(sc)}건 로드")
+    return sc
+
 
 class CollisionRiskSimulator:
     def __init__(self):
@@ -286,7 +313,7 @@ class CollisionRiskSimulator:
         self.use_builder = False
         self.builder = None
         self.selected_tl_id = -1
-        # HUD용 시나리오 정보
+        # hud용 시나리오 정보
         self._cur_scenario_idx = 0
         self._total_scenarios = 0
 
@@ -413,12 +440,10 @@ class CollisionRiskSimulator:
                 pass
         self.world.tick()
 
-        # 속도 방향 결정
         if self.use_builder:
             fwd = vehicle.get_transform().get_forward_vector()
             self.move_dir = (fwd.x, fwd.y)
         else:
-            # OpenDRIVE 맵: 정지선 방향 계산
             loc = vehicle.get_location()
             dx = stop.x - loc.x
             dy = stop.y - loc.y
@@ -439,7 +464,6 @@ class CollisionRiskSimulator:
                 break
             last_z = cur_z
 
-        # 안착 완료 후 목표 속도 부여 (1틱)
         vehicle.set_target_velocity(carla.Vector3D(
             x=self.move_dir[0] * ms, y=self.move_dir[1] * ms, z=0))
         self.world.tick()
@@ -447,7 +471,6 @@ class CollisionRiskSimulator:
         return vehicle
 
     def _cleanup(self):
-        # 배치 destroy 시도 → RPC 호출 1회로 단축, 실패 시 개별 destroy로 fallback
         if self.spawned:
             batch_ok = False
             if self.client is not None:
@@ -464,13 +487,11 @@ class CollisionRiskSimulator:
                     except Exception:
                         pass
             self.spawned.clear()
-        # builder 사용 시 builder의 cleanup도 호출 (잔존 actor 정리)
         if self.use_builder and self.builder:
             try:
                 self.builder.cleanup()
             except Exception:
                 pass
-        # 5 tick 돌려서 destroy 완료 보장
         if self.world:
             try:
                 for _ in range(5):
@@ -480,7 +501,6 @@ class CollisionRiskSimulator:
 
     def _spd(self, v):
         vel = v.get_velocity()
-        # z 성분 포함 (원본 동작 유지). 차량 운동은 거의 평면이지만 결과 보존.
         return math.sqrt(vel.x * vel.x + vel.y * vel.y + vel.z * vel.z)
 
     def _spd_kmh(self, v):
@@ -498,7 +518,6 @@ class CollisionRiskSimulator:
         v.apply_control(carla.VehicleControl(throttle=0, brake=1.0, steer=0))
 
     def _cdist(self, a, b):
-        # 2D 거리 (z는 동일 평면 가정). math.hypot은 sqrt보다 수치 안정성 ↑
         return math.hypot(a.x - b.x, a.y - b.y)
 
     def _draw_hud(self, ego, cfg, elapsed, decision, scenario_idx=0, total=0):
@@ -560,7 +579,6 @@ class CollisionRiskSimulator:
             return
         try:
             sl = self.stopline_location
-            # 진행방향에 수직인 벡터: (dx,dy) -> (-dy,dx)
             perp_x = -self.move_dir[1]
             perp_y = self.move_dir[0]
 
@@ -570,7 +588,6 @@ class CollisionRiskSimulator:
                 z=sl.z + height
             )
 
-            # 정지선 쪽으로 yaw 맞춤
             target_yaw = math.degrees(math.atan2(-perp_y, -perp_x))
 
             spectator = self.world.get_spectator()
@@ -582,7 +599,6 @@ class CollisionRiskSimulator:
             pass
 
     def _set_yellow_signal(self, yellow_time_s):
-        # 신호등을 황색으로
         self._signal_changed = False
 
         if not self.world:
@@ -629,7 +645,6 @@ class CollisionRiskSimulator:
                     except Exception:
                         pass
 
-                # stop_waypoint로 못 찾으면 affected_lane으로 한번 더
                 if not candidates:
                     for tl in all_tls:
                         try:
@@ -640,8 +655,6 @@ class CollisionRiskSimulator:
                                     break
                         except Exception:
                             pass
-
-                # 자동차 방향과 가장 가까운 신호등 선택
                 if candidates:
                     best = None
                     best_diff = 360
@@ -658,11 +671,8 @@ class CollisionRiskSimulator:
                 if tl.id == self.selected_tl_id:
                     target_tl = tl
                     break
-
-        # 황색 설정
         if target_tl:
             try:
-                # target과 같은 도로(180도 차이)는 같은 사이클로 묶음
                 target_yaw = target_tl.get_transform().rotation.yaw
                 yellow_group = [target_tl]
                 red_group = []
@@ -672,13 +682,11 @@ class CollisionRiskSimulator:
                         continue
                     tl_yaw = tl.get_transform().rotation.yaw
                     yaw_diff = abs(((tl_yaw - target_yaw + 180) % 360) - 180)
-                    # 135~180도면 같은 도로(반대방향), 그 외는 교차도로
                     if yaw_diff > 135:
                         yellow_group.append(tl)
                     else:
                         red_group.append(tl)
 
-                # 먼저 전부 freeze 후 state 설정 (순서 중요. 그룹시스템이 덮어쓰는거 방지)
                 for tl in all_tls:
                     try:
                         tl.freeze(True)
@@ -710,7 +718,6 @@ class CollisionRiskSimulator:
         return target_tl
 
     def _release_signal(self, traffic_light):
-        # 시뮬 끝나고 신호등 해제
         if traffic_light:
             try:
                 traffic_light.freeze(False)
@@ -718,7 +725,6 @@ class CollisionRiskSimulator:
                 pass
 
     def _update_signal(self, traffic_light, elapsed, yellow_time):
-        # 시간 지나면 적색으로 전환. 한번만 동작.
         if not traffic_light:
             return
         if getattr(self, '_signal_changed', False):
@@ -740,9 +746,9 @@ class CollisionRiskSimulator:
             return
         self._set_weather(cfg.road_condition)
 
-        # 황색 신호 설정 (스폰 후 = 황색 전환 시점)
+
         tl = self._set_yellow_signal(cfg.yellow_time_s)
-        self._set_static_camera()  # 정지선 측면 고정 카메라
+        self._set_static_camera()  # 정지선 측면 카메라 고정 
 
         sms = cfg.speed_ms
         skmh = cfg.speed_kmh
@@ -755,7 +761,7 @@ class CollisionRiskSimulator:
         ssum = 0
         scnt = 0
         spd_pass = 0
-        extra_dist = sms * 2.0  # loop 밖으로 (상수)
+        extra_dist = sms * 2.0 
         finish_threshold = cfg.distance_m + max(cfg.intersection_width_m, 40) + cfg.L + 20 + extra_dist
 
         for _ in range(MAX_SIM_STEPS):
@@ -765,7 +771,6 @@ class CollisionRiskSimulator:
             self.world.tick()
             elapsed += FIXED_DELTA_SECONDS
 
-            # HUD + 카메라
             self._draw_hud(ego, cfg, elapsed, "GO",
                            self._cur_scenario_idx, self._total_scenarios)
 
@@ -780,7 +785,6 @@ class CollisionRiskSimulator:
                 passed = True
                 pt = elapsed
                 spd_pass = self._spd(ego)
-            # 통과 후 2초 더 진행
             if cum >= finish_threshold:
                 break
         if passed and pt:
@@ -799,7 +803,6 @@ class CollisionRiskSimulator:
         self._cleanup()
 
     def run_exp2(self, cfg, result):
-        # 안정화 동안 진행할 거리만큼 더 뒤에서 spawn
         bstep = WARMUP_STEPS
         warmup_advance = cfg.speed_ms * (bstep * FIXED_DELTA_SECONDS)
         spawn_dist = cfg.distance_m + warmup_advance
@@ -840,11 +843,10 @@ class CollisionRiskSimulator:
                     self._set_vel(rear, cfg.rear_speed_kmh)
             self.world.tick()
 
-            # HUD
+            # HUD부분
             self._draw_hud(ego, cfg, step * FIXED_DELTA_SECONDS, "STOP",
                            self._cur_scenario_idx, self._total_scenarios)
 
-            # 황색 → 적색 전환
             self._update_signal(tl, step * FIXED_DELTA_SECONDS, cfg.yellow_time_s)
 
             g = ego.get_location().distance(rear.get_location()) - cfg.L
@@ -864,7 +866,6 @@ class CollisionRiskSimulator:
         # 알고리즘 판정대로 행동시킴 (진행=통과, 급정지/감속=정지선 정차)
         dec = result.decision
 
-        # 안정화 동안 진행할 거리만큼 더 뒤에서 spawn
         astep = WARMUP_STEPS
         warmup_advance = cfg.speed_ms * (astep * FIXED_DELTA_SECONDS)
         spawn_dist = cfg.distance_m + warmup_advance
@@ -884,12 +885,11 @@ class CollisionRiskSimulator:
         tl = self._set_yellow_signal(cfg.yellow_time_s)
         self._set_static_camera()
 
-        # 차종/노면별 감속도 (loop 밖에서 1회 계산)
         spec = VEHICLE_SPECS[cfg.ego_type]
         is_dry = (cfg.road_condition == RoadCondition.DRY)
         a_comf = spec["a_comf_dry"] if is_dry else spec["a_comf_wet"]
         a_max = spec["a_max_dry"] if is_dry else spec["a_max_wet"]
-        # 후방차 spec도 미리 캐싱
+        # 후방차
         rear_spec = VEHICLE_SPECS[cfg.rear_type] if rear else None
         rear_t_r = rear_spec["t_r"] if rear_spec else 0
         if rear_spec:
@@ -903,27 +903,24 @@ class CollisionRiskSimulator:
         min_gap = cfg.gap_m if cfg.has_rear else NO_REAR_GAP
         cum = 0
         prev_loc = ego.get_location()
-        # spawn~통과까지 누적거리 = warmup + d + W + L
+        # spawn~통과까지 누적거리
         total = warmup_advance + cfg.distance_m + cfg.intersection_width_m + cfg.L
-        extra_distance = cfg.speed_ms * 2.0  # loop 밖으로
-        pass_time = None  # 인스턴스 변수 대신 지역변수
+        extra_distance = cfg.speed_ms * 2.0 
+        pass_time = None  
 
         for step in range(EXP3_MAX_STEPS):
             current_v = self._spd(ego)
 
             if step < astep:
-                # 안정화: 등속
                 th, br = compute_throttle_brake(cfg.speed_ms, current_v, cfg.speed_kmh)
                 ego.apply_control(carla.VehicleControl(throttle=th, brake=br, steer=0))
                 if rear:
                     self._set_vel(rear, cfg.rear_speed_kmh)
             else:
                 if dec == "진행":
-                    # 통과: 등속
                     th, br = compute_throttle_brake(cfg.speed_ms, current_v, cfg.speed_kmh)
                     ego.apply_control(carla.VehicleControl(throttle=th, brake=br, steer=0))
                 elif dec in ("급정지", "감속"):
-                    # builder의 safe_stop_control 사용
                     if self.use_builder and self.builder:
                         if dec == "감속":
                             ctrl = self.builder.safe_stop_control(
@@ -937,7 +934,6 @@ class CollisionRiskSimulator:
                                 target_speed_kmh=cfg.speed_kmh)
                         ego.apply_control(ctrl)
                     else:
-                        # builder 없을 때 fallback
                         dist_to_stopline = self.stopline_location.distance(ego.get_location())
                         target_dist = dist_to_stopline - DIST_MARGIN_M
                         if target_dist <= 0.3:
@@ -955,7 +951,7 @@ class CollisionRiskSimulator:
                         # 반응 전: 등속
                         self._set_vel(rear, cfg.rear_speed_kmh)
                     else:
-                        # 반응 후: ego가 느려지면 후방도 브레이크
+                        # 반응 후: 앞차가 느려지면 후방도 브레이크
                         ego_kmh = self._spd_kmh(ego)
                         rear_kmh = self._spd_kmh(rear)
                         if dec in ("급정지", "감속") or rear_kmh > ego_kmh + 5:
@@ -966,7 +962,6 @@ class CollisionRiskSimulator:
 
             self.world.tick()
 
-            # HUD
             elapsed_hud = max(0, (step - astep)) * FIXED_DELTA_SECONDS
             self._draw_hud(ego, cfg, elapsed_hud, dec,
                            self._cur_scenario_idx, self._total_scenarios)
@@ -974,7 +969,7 @@ class CollisionRiskSimulator:
             if step >= astep:
                 self._update_signal(tl, (step - astep) * FIXED_DELTA_SECONDS, cfg.yellow_time_s)
 
-            # 누적 이동거리 — tick 직후 위치를 한 번만 fetch해서 step 끝까지 재사용 (RPC 비용 절감)
+            # 누적 이동거리 
             cur_loc = ego.get_location()
             cum += self._cdist(prev_loc, cur_loc)
             prev_loc = cur_loc
@@ -987,7 +982,7 @@ class CollisionRiskSimulator:
                 if g < COLLISION_GAP_M:
                     col = True
 
-            # 통과 시점 한 번만 기록
+            # 통과 시점 기록
             if cum >= total and pass_time is None:
                 pass_time = max(0, (step - astep) * FIXED_DELTA_SECONDS)
                 if pass_time > cfg.yellow_time_s:
@@ -997,19 +992,18 @@ class CollisionRiskSimulator:
             if dec != "진행" and step > astep + 30:
                 if self._spd_kmh(ego) < STATIONARY_KMH:
                     final_dist_to_stopline = self.stopline_location.distance(cur_loc)
-                    # 정지선 5m 이내면 안전정차로 인정. 횡단보도/교차로 침범은 stop_overrun_m으로 따로 봄
+                    # 정지선 5m 이내면 안전정차로 인정. 횡단보도/교차로 침범은 stop_overrun_m으로 봄
                     if final_dist_to_stopline < SAFE_STOP_RADIUS_M:
                         safe_stop = True
                     break
 
-            # 통과 후 2초 더 진행 (시각 확인용)
             if dec == "진행" and cum >= total + extra_distance and step > astep:
                 break
 
             if step > EXP3_HARD_BREAK_STEP:
                 break
 
-        # 결과
+        #결과!!!!!!!!!
         result.actual_collision = col
         result.red_entry = red_entry
         result.safe_stop = safe_stop
@@ -1022,9 +1016,7 @@ class CollisionRiskSimulator:
 
         result.final_speed_kmh = round(self._spd_kmh(ego), 1)
 
-        # 딜레마존 분석-정차 위치
         if self.use_builder and self.builder:
-            # builder가 부호있는 거리 반환 (양수=정지선 전, 음수=통과)
             signed_dist = self.builder.distance_to_stopline(ego)
             result.dist_to_stopline_m = round(abs(signed_dist), 2)
             result.stop_overrun_m = round(-signed_dist, 2)
@@ -1033,7 +1025,6 @@ class CollisionRiskSimulator:
             result.dist_to_stopline_m = round(d_abs, 2)
             result.stop_overrun_m = round(cum - cfg.distance_m, 2)
 
-        # 침범 영역 분류 (정지선 -> sb -> 횡단보도 -> 여유 -> 교차로)
         if self.use_builder and self.builder:
             try:
                 pts = self.builder.get_experiment_points()
@@ -1062,17 +1053,17 @@ class CollisionRiskSimulator:
             elif overrun > 1.5:
                 result.in_crosswalk = True
 
-        # 알고리즘 vs 실제
+        # 알고리즘과 실제 비교
         result.is_dilemma_zone = (result.zone == "딜레마구간")
         if dec == "진행":
             result.decision_feasible = not red_entry
         elif dec in ("급정지", "감속"):
             result.decision_feasible = safe_stop
 
-        # 성공 판정 (dec은 algorithm_predict에서 항상 "진행"/"감속"/"급정지" 중 하나)
+        # 성공 판정
         if dec == "진행":
             result.success = not red_entry
-        else:  # "급정지" 또는 "감속" — 둘 다 동일한 판정
+        else: 
             result.success = safe_stop and not col
 
         self._release_signal(tl)
@@ -1140,7 +1131,7 @@ class ResultManager:
         self.results.append(r)
 
     def load_intermediate(self, exp):
-        # 중간 파일 읽어서 재개. 자동 백업도 같이 함. 마지막 scenario_id 반환 (없으면 -1)
+        # 중간 파일 읽어서 재개 자동 백업도 같이 함
         fp = os.path.join(self.od, f"exp{exp}_intermediate.csv")
         if not os.path.exists(fp):
             return -1
@@ -1163,7 +1154,6 @@ class ResultManager:
             if not rows:
                 return -1
 
-            # CSV row -> ScenarioResult 복원
             from dataclasses import fields
             sr_fields = {f.name: f.type for f in fields(ScenarioResult)}
 
@@ -1206,7 +1196,8 @@ class ResultManager:
         if not self.results:
             return
         if not fn:
-            fn = f"exp{self.results[0].exp}_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            prefix = getattr(self, 'label', None) or f"exp{self.results[0].exp}"
+            fn = f"{prefix}_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         fp = os.path.join(self.od, fn)
         fns = list(asdict(self.results[0]).keys())
         with open(fp, "w", newline="", encoding="utf-8-sig") as f:
@@ -1220,14 +1211,16 @@ class ResultManager:
         if not self.results:
             return
         if not fn:
-            fn = f"exp{self.results[0].exp}_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            prefix = getattr(self, 'label', None) or f"exp{self.results[0].exp}"
+            fn = f"{prefix}_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         fp = os.path.join(self.od, fn)
         with open(fp, "w", encoding="utf-8") as f:
             json.dump([asdict(r) for r in self.results], f, ensure_ascii=False, indent=2)
         print(f"[INFO] JSON → {fp}")
 
     def save_intermediate(self):
-        self.save_csv(f"exp{self.results[0].exp}_intermediate.csv")
+        prefix = getattr(self, 'label', None) or f"exp{self.results[0].exp}"
+        self.save_csv(f"{prefix}_intermediate.csv")
     def print_summary(self):
         if not self.results:
             print("[WARN] 결과 없음")
@@ -1294,25 +1287,32 @@ class ResultManager:
                 print(f"    평균 정지선 침범: {avg_overrun:+.2f}m")
         print(f"{'=' * 60}\n")
 
-def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
-    # pause_sec: 시나리오 간 대기 (초). 전체 실행시 0~0.3, 디버그시 1.5~3 권장.
-    # resume=True면 exp{n}_intermediate.csv에서 이어서 진행함
+def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False, custom_scenarios=None, label=None):
+    
     if not CARLA_AVAILABLE:
         print("[ERR] carla 없음")
         return
     print("=" * 60)
-    print(f" 실험 {exp} 시뮬레이션 (대기 {pause_sec}s, resume={resume})")
+    if custom_scenarios is not None:
+        print(f" 커스텀 시나리오 ({label or 'custom'}, 대기 {pause_sec}s, resume={resume})")
+    else:
+        print(f" 실험 {exp} 시뮬레이션 (대기 {pause_sec}s, resume={resume})")
     print("=" * 60)
     sim = CollisionRiskSimulator()
     sim.setup()
-    scenarios = generate_scenarios(exp, quick)
+    if custom_scenarios is not None:
+        scenarios = custom_scenarios
+    else:
+        scenarios = generate_scenarios(exp, quick)
     total = len(scenarios)
     sim._total_scenarios = total
     print(f"[INFO] 시나리오={total:,}{'  (quick)' if quick else ''}\n")
 
     mgr = ResultManager()
+    if label:
+        mgr.label = label 
 
-    # resume: 이전 중간 파일에서 복원
+    # 이전 중간 파일에서 복원
     last_done_id = -1
     if resume:
         last_done_id = mgr.load_intermediate(exp)
@@ -1326,7 +1326,7 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
         cw = None
         wc = 0
         for i, cfg in enumerate(scenarios):
-            # 이미 처리한 시나리오는 건너뜀
+            # 이미 진행한 시나리오는 건너뜀
             if cfg.scenario_id <= last_done_id:
                 continue
 
@@ -1344,7 +1344,7 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
             result = sim.run_scenario(cfg)
             mgr.add(result)
 
-            # 결과 요약 출력 (한 줄)
+            # 결과 요약 출력
             if exp == 3:
                 # 정차 위치 영역 표시
                 if result.past_intersection:
@@ -1358,7 +1358,7 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
                 else:
                     pos_zone = "[정상]"
 
-                # 딜레마존 마커
+                # 딜레마존 
                 dz = "[딜레마]" if result.is_dilemma_zone else result.zone
 
                 print(f"    → 판정={result.decision} 성공={'OK' if result.success else 'NG'} "
@@ -1377,7 +1377,7 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
                 mgr.save_intermediate()
                 print(f"  [save] {i + 1}/{total}")
 
-            # 시나리오 간 대기 (결과 확인용)
+            # 시나리오 간 대기
             if pause_sec > 0 and i < total - 1:
                 time.sleep(pause_sec)
         if cw:
@@ -1391,7 +1391,6 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
         except Exception as e:
             print(f"[WARN] intermediate 저장 실패: {e}")
     except RuntimeError as e:
-        # CARLA 서버 timeout 등 런타임 에러시 데이터 보호
         print(f"\n\n[ERR] CARLA 런타임 에러: {e}")
         print("[INFO] CARLA 서버 재시작 후 resume=y 로 이어서 진행하세요.")
         try:
@@ -1401,7 +1400,6 @@ def run_carla_simulation(exp, quick=False, pause_sec=1.5, resume=False):
         except Exception as e2:
             print(f"[WARN] intermediate 저장 실패: {e2}")
     except Exception as e:
-        # 기타 예외 데이터 보호
         print(f"\n\n[ERR] 예외 발생: {e}")
         try:
             if mgr.results:
@@ -1424,12 +1422,12 @@ if __name__ == "__main__":
     print("  3) 실험 3 — 종합")
     print("  4) Quick 테스트")
     print("  5) 이론 분석만")
+    print("  6) 딜레마구간만 재실험 (JSON 시나리오)")
     mode = input("번호? ").strip()
 
-    # 대기 시간 입력 (1~5만)
     pause = 1.5  # 기본값
     resume = False
-    if mode in ("1", "2", "3", "4"):
+    if mode in ("1", "2", "3", "4", "6"):
         try:
             inp = input("시나리오 간 대기 시간(초) [기본 1.5, 빠르게 0.3]: ").strip()
             if inp:
@@ -1469,5 +1467,14 @@ if __name__ == "__main__":
                 mgr.add(r)
             mgr.save_csv(f"theoretical_exp{ph}.csv")
             mgr.print_summary()
+    elif mode == "6":
+        # 딜레마구간만 재실험
+        json_path = input("시나리오 JSON 경로 [기본: dilemma_scenarios.json]: ").strip()
+        if not json_path:
+            json_path = "dilemma_scenarios.json"
+        custom = load_scenarios_from_json(json_path)
+        if custom:
+            run_carla_simulation(3, pause_sec=pause, resume=resume,
+                                 custom_scenarios=custom, label="dilemma")
     else:
         run_carla_simulation(1, True)
