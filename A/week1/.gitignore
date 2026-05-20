@@ -1,0 +1,22 @@
+# 영상·대용량 데이터
+*.mp4
+*.avi
+*.mov
+data/videos/
+
+# 모델 가중치
+*.pt
+*.pth
+yolo11n.pt
+
+# Colab/Jupyter 부산물
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# 결과 영상
+outputs/videos/
+
+# OS
+.DS_Store
+Thumbs.db
