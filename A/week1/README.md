@@ -18,7 +18,4 @@
 - ID switching 일부 남음 (호모그래피 적용 후 재평가 예정)
 
 ## 영상 파일
-영상은 용량 문제로 리포에 포함하지 않음.
-구글 드라이브 링크: 
-https://drive.google.com/drive/folders/1vEgJmnnCbmXFtdWYTVoILBdc5wO1dIrm?usp=drive_link (테스트-원본영상)
-https://drive.google.com/file/d/1T4sB5M8DfbKrnffcqYurpCQ9LFb0eJGB/view?usp=drive_link (테스트-차량검출&추적 적용한 영상)
+영상은 용량 문제로 리포에 포함하지 않음
