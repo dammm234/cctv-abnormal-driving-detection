@@ -1,0 +1,58 @@
+defaults:
+  duration_ticks: 250
+  fixed_delta_seconds: 0.05
+  initial_speed_kmh: 60.0
+  target_speed_kmh: 60.0
+scenarios:
+- name: normal_60kmh
+  behavior: normal
+  enabled: true
+  description: 정상 주행 baseline. autopilot, 60 km/h 목표.
+- name: normal_50kmh
+  behavior: normal
+  enabled: true
+  initial_speed_kmh: 50.0
+  target_speed_kmh: 50.0
+  description: 정상 주행 baseline (저속). 속도 다양화.
+- name: wobble_mild
+  behavior: wobble
+  enabled: true
+  params:
+    amplitude: 0.045
+    period: 1.5
+    lane_correction_gain: 0.025
+  description: 강한 비틀거림. offset_max ~2.0m, 차선 경계 근처.
+- name: wobble_medium
+  behavior: wobble
+  enabled: true
+  params:
+    amplitude: 0.035
+    period: 2.0
+    lane_correction_gain: 0.03
+  description: 중간 비틀거림. offset_max ~1.0m 예상.
+- name: wobble_strong
+  behavior: wobble
+  enabled: true
+  params:
+    amplitude: 0.025
+    period: 2.5
+    lane_correction_gain: 0.04
+  description: 약한 비틀거림. offset_max < 0.5m 예상.
+- name: abrupt_strong
+  behavior: abrupt
+  enabled: true
+  params:
+    period: 5.0
+  description: 느린 급조작. 5초마다 가속/제동 토글.
+- name: abrupt_medium
+  behavior: abrupt
+  enabled: true
+  params:
+    period: 4.0
+  description: 중간 급조작. 4초 주기.
+- name: abrupt_mild
+  behavior: abrupt
+  enabled: true
+  params:
+    period: 2.5
+  description: 빠른 급조작. 2.5초 주기로 매우 자주 토글.
