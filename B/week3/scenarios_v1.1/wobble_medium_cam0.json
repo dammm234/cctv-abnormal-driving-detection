@@ -1,0 +1,3699 @@
+{
+  "version": "v1.1",
+  "note": "CARLA wobble_medium cam0 - ground truth (no detection error)",
+  "source": "carla_ground_truth",
+  "scenario": "wobble_medium",
+  "behavior": "wobble",
+  "intensity": "medium",
+  "camera": "cam0",
+  "fps": 20.0,
+  "total_frames": 250,
+  "road_info": {
+    "lane_width_m": 3.5,
+    "num_lanes": 6,
+    "road_width_m": 21.0
+  },
+  "frames": [
+    {
+      "frame_id": 0,
+      "timestamp_sec": 0.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.0224667972582,
+            527.1697934296612,
+            984.8175690127205,
+            556.266120091258
+          ],
+          "position_road_m": [
+            5.2479999999999976,
+            0.0
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.002,
+          "speed_est_mps": 16.672222222222224
+        }
+      ]
+    },
+    {
+      "frame_id": 1,
+      "timestamp_sec": 0.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.242880419945,
+            533.8500422861302,
+            984.569193241971,
+            562.5947769026498
+          ],
+          "position_road_m": [
+            5.247,
+            0.8340000000000032
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.004,
+          "speed_est_mps": 16.691666666666666
+        }
+      ]
+    },
+    {
+      "frame_id": 2,
+      "timestamp_sec": 0.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.4476434795405,
+            540.7887531428744,
+            984.2870292239003,
+            569.1682924511441
+          ],
+          "position_road_m": [
+            5.244999999999997,
+            1.66700000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.005,
+          "speed_est_mps": 16.725
+        }
+      ]
+    },
+    {
+      "frame_id": 3,
+      "timestamp_sec": 0.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.6607470381488,
+            548.0100946223649,
+            983.9933719769302,
+            576.009563326451
+          ],
+          "position_road_m": [
+            5.2429999999999986,
+            2.5
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.007,
+          "speed_est_mps": 16.775
+        }
+      ]
+    },
+    {
+      "frame_id": 4,
+      "timestamp_sec": 0.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.8827112833357,
+            555.5316940794613,
+            983.6875046812683,
+            583.1352891279107
+          ],
+          "position_road_m": [
+            5.241,
+            3.333000000000027
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.009,
+          "speed_est_mps": 16.836111111111112
+        }
+      ]
+    },
+    {
+      "frame_id": 5,
+      "timestamp_sec": 0.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            947.1123740263822,
+            563.3246174677454,
+            983.3702956075931,
+            590.5180586536535
+          ],
+          "position_road_m": [
+            5.238999999999997,
+            4.161000000000001
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.011,
+          "speed_est_mps": 16.383333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 6,
+      "timestamp_sec": 0.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            947.2685808823501,
+            571.3230221990685,
+            982.965210903468,
+            598.095494714907
+          ],
+          "position_road_m": [
+            5.233999999999998,
+            4.975999999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.016,
+          "speed_est_mps": 16.32777777777778
+        }
+      ]
+    },
+    {
+      "frame_id": 7,
+      "timestamp_sec": 0.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            947.2971966296357,
+            579.6573500857348,
+            982.4089615358998,
+            605.991173765433
+          ],
+          "position_road_m": [
+            5.224,
+            5.7900000000000205
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.026,
+          "speed_est_mps": 16.28611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 8,
+      "timestamp_sec": 0.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            947.1901223795676,
+            588.3601250483409,
+            981.6911662358243,
+            614.2359079405335
+          ],
+          "position_road_m": [
+            5.209,
+            6.604000000000042
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.041,
+          "speed_est_mps": 16.28333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 9,
+      "timestamp_sec": 0.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.9661611976575,
+            597.4563878670252,
+            980.8288708210242,
+            622.8534200845502
+          ],
+          "position_road_m": [
+            5.189999999999998,
+            7.418000000000006
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.06,
+          "speed_est_mps": 16.275000000000002
+        }
+      ]
+    },
+    {
+      "frame_id": 10,
+      "timestamp_sec": 0.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            946.5595109069648,
+            606.961362051268,
+            979.7552047981039,
+            631.8581324696223
+          ],
+          "position_road_m": [
+            5.164999999999999,
+            8.230999999999995
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.085,
+          "speed_est_mps": 16.269444444444446
+        }
+      ]
+    },
+    {
+      "frame_id": 11,
+      "timestamp_sec": 0.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            945.9865764893708,
+            616.9032636713861,
+            978.4845930738348,
+            641.2767761097342
+          ],
+          "position_road_m": [
+            5.134999999999998,
+            9.043000000000006
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.115,
+          "speed_est_mps": 16.26388888888889
+        }
+      ]
+    },
+    {
+      "frame_id": 12,
+      "timestamp_sec": 0.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            945.2059880571728,
+            627.3391376657444,
+            976.9716626069451,
+            651.1633935780736
+          ],
+          "position_road_m": [
+            5.099,
+            9.855999999999995
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.151,
+          "speed_est_mps": 16.255555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 13,
+      "timestamp_sec": 0.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.2320210608285,
+            638.2653478881793,
+            975.230944016044,
+            661.514540104591
+          ],
+          "position_road_m": [
+            5.058,
+            10.66700000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.192,
+          "speed_est_mps": 16.25
+        }
+      ]
+    },
+    {
+      "frame_id": 14,
+      "timestamp_sec": 0.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            943.0191499784798,
+            649.7461414159023,
+            973.2124032124516,
+            672.3910813413812
+          ],
+          "position_road_m": [
+            5.010999999999999,
+            11.478000000000009
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.239,
+          "speed_est_mps": 16.244444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 15,
+      "timestamp_sec": 0.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            941.5808379989161,
+            661.809629930367,
+            970.9275306353815,
+            683.8196494077162
+          ],
+          "position_road_m": [
+            4.959,
+            12.288000000000011
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.291,
+          "speed_est_mps": 16.23611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 16,
+      "timestamp_sec": 0.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            939.9326273128169,
+            674.5174898572454,
+            968.3875403052908,
+            695.8586746016009
+          ],
+          "position_road_m": [
+            4.902999999999999,
+            13.098000000000013
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.347,
+          "speed_est_mps": 16.23333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 17,
+      "timestamp_sec": 0.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            938.05708154806,
+            687.9057569154579,
+            965.5724670276769,
+            708.5422960251707
+          ],
+          "position_road_m": [
+            4.843,
+            13.907000000000039
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.407,
+          "speed_est_mps": 16.227777777777778
+        }
+      ]
+    },
+    {
+      "frame_id": 18,
+      "timestamp_sec": 0.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            935.9703905503604,
+            702.0486142504652,
+            962.4932948134856,
+            721.9407924478091
+          ],
+          "position_road_m": [
+            4.779999999999998,
+            14.716000000000008
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.47,
+          "speed_est_mps": 16.22222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 19,
+      "timestamp_sec": 0.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            933.7264860616738,
+            717.0118932933059,
+            959.1993356551261,
+            736.116530488395
+          ],
+          "position_road_m": [
+            4.7159999999999975,
+            15.525000000000034
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.534,
+          "speed_est_mps": 16.21666666666667
+        }
+      ]
+    },
+    {
+      "frame_id": 20,
+      "timestamp_sec": 1.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            931.349165098634,
+            732.7077052910277,
+            955.720554201018,
+            750.9862471178157
+          ],
+          "position_road_m": [
+            4.6519999999999975,
+            16.326000000000022
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.598,
+          "speed_est_mps": 15.908333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 21,
+      "timestamp_sec": 1.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            928.6002807714991,
+            748.3568006643634,
+            952.6002807714991,
+            766.3568006643634
+          ],
+          "position_road_m": [
+            4.591999999999999,
+            17.107000000000028
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.658,
+          "speed_est_mps": 15.525
+        }
+      ]
+    },
+    {
+      "frame_id": 22,
+      "timestamp_sec": 1.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            925.6217249569343,
+            764.3239490777582,
+            949.6217249569343,
+            782.3239490777582
+          ],
+          "position_road_m": [
+            4.535,
+            17.872000000000014
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.715,
+          "speed_est_mps": 15.241666666666665
+        }
+      ]
+    },
+    {
+      "frame_id": 23,
+      "timestamp_sec": 1.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            922.635434035597,
+            781.026276937909,
+            946.635434035597,
+            799.026276937909
+          ],
+          "position_road_m": [
+            4.481999999999999,
+            18.626000000000033
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.768,
+          "speed_est_mps": 15.033333333333331
+        }
+      ]
+    },
+    {
+      "frame_id": 24,
+      "timestamp_sec": 1.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            919.7664078248929,
+            798.5832216374113,
+            943.7664078248929,
+            816.5832216374113
+          ],
+          "position_road_m": [
+            4.436,
+            19.372000000000014
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.814,
+          "speed_est_mps": 14.880555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 25,
+      "timestamp_sec": 1.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.9840521106955,
+            817.084562297471,
+            940.9840521106955,
+            835.084562297471
+          ],
+          "position_road_m": [
+            4.395999999999997,
+            20.11099999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.854,
+          "speed_est_mps": 14.769444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 26,
+      "timestamp_sec": 1.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.3389909802171,
+            836.6886902576865,
+            938.3389909802171,
+            854.6886902576865
+          ],
+          "position_road_m": [
+            4.3629999999999995,
+            20.846000000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.887,
+          "speed_est_mps": 14.68611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 27,
+      "timestamp_sec": 1.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            911.9369797423168,
+            857.526007825953,
+            935.9369797423168,
+            875.526007825953
+          ],
+          "position_road_m": [
+            4.338999999999999,
+            21.57800000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.911,
+          "speed_est_mps": 14.625
+        }
+      ]
+    },
+    {
+      "frame_id": 28,
+      "timestamp_sec": 1.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            909.8022779752017,
+            879.7475883322157,
+            933.8022779752017,
+            897.7475883322157
+          ],
+          "position_road_m": [
+            4.323999999999998,
+            22.307999999999993
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.926,
+          "speed_est_mps": 14.580555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 29,
+      "timestamp_sec": 1.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            907.9642377591241,
+            903.4958452279598,
+            931.9642377591241,
+            921.4958452279598
+          ],
+          "position_road_m": [
+            4.317999999999998,
+            23.036
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.932,
+          "speed_est_mps": 14.544444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 30,
+      "timestamp_sec": 1.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            906.5589830377163,
+            928.9337746053424,
+            930.5589830377163,
+            946.9337746053424
+          ],
+          "position_road_m": [
+            4.323,
+            23.762
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.928,
+          "speed_est_mps": 14.519444444444446
+        }
+      ]
+    },
+    {
+      "frame_id": 31,
+      "timestamp_sec": 1.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            905.5252435356697,
+            956.3260100721456,
+            929.5252435356697,
+            974.3260100721456
+          ],
+          "position_road_m": [
+            4.337,
+            24.488
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.914,
+          "speed_est_mps": 14.497222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 32,
+      "timestamp_sec": 1.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            904.9681608136467,
+            985.8222488529685,
+            928.9681608136467,
+            1003.8222488529685
+          ],
+          "position_road_m": [
+            4.360999999999997,
+            25.21199999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.889,
+          "speed_est_mps": 14.483333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 33,
+      "timestamp_sec": 1.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            904.9471901640841,
+            1017.6742253481086,
+            928.9471901640841,
+            1035.6742253481086
+          ],
+          "position_road_m": [
+            4.395,
+            25.934000000000026
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.855,
+          "speed_est_mps": 14.469444444444445
+        }
+      ]
+    },
+    {
+      "frame_id": 34,
+      "timestamp_sec": 1.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            905.5260198246956,
+            1052.2754380036952,
+            929.5260198246956,
+            1070.2754380036952
+          ],
+          "position_road_m": [
+            4.439,
+            26.656000000000006
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.812,
+          "speed_est_mps": 14.461111111111112
+        }
+      ]
+    },
+    {
+      "frame_id": 35,
+      "timestamp_sec": 1.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 36,
+      "timestamp_sec": 1.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 37,
+      "timestamp_sec": 1.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 38,
+      "timestamp_sec": 1.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 39,
+      "timestamp_sec": 1.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 40,
+      "timestamp_sec": 2.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 41,
+      "timestamp_sec": 2.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 42,
+      "timestamp_sec": 2.1,
+      "vehicles": []
+    },
+    {
+      "frame_id": 43,
+      "timestamp_sec": 2.15,
+      "vehicles": []
+    },
+    {
+      "frame_id": 44,
+      "timestamp_sec": 2.2,
+      "vehicles": []
+    },
+    {
+      "frame_id": 45,
+      "timestamp_sec": 2.25,
+      "vehicles": []
+    },
+    {
+      "frame_id": 46,
+      "timestamp_sec": 2.3,
+      "vehicles": []
+    },
+    {
+      "frame_id": 47,
+      "timestamp_sec": 2.35,
+      "vehicles": []
+    },
+    {
+      "frame_id": 48,
+      "timestamp_sec": 2.4,
+      "vehicles": []
+    },
+    {
+      "frame_id": 49,
+      "timestamp_sec": 2.45,
+      "vehicles": []
+    },
+    {
+      "frame_id": 50,
+      "timestamp_sec": 2.5,
+      "vehicles": []
+    },
+    {
+      "frame_id": 51,
+      "timestamp_sec": 2.55,
+      "vehicles": []
+    },
+    {
+      "frame_id": 52,
+      "timestamp_sec": 2.6,
+      "vehicles": []
+    },
+    {
+      "frame_id": 53,
+      "timestamp_sec": 2.65,
+      "vehicles": []
+    },
+    {
+      "frame_id": 54,
+      "timestamp_sec": 2.7,
+      "vehicles": []
+    },
+    {
+      "frame_id": 55,
+      "timestamp_sec": 2.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 56,
+      "timestamp_sec": 2.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 57,
+      "timestamp_sec": 2.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 58,
+      "timestamp_sec": 2.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 59,
+      "timestamp_sec": 2.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 60,
+      "timestamp_sec": 3.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 61,
+      "timestamp_sec": 3.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 62,
+      "timestamp_sec": 3.1,
+      "vehicles": []
+    },
+    {
+      "frame_id": 63,
+      "timestamp_sec": 3.15,
+      "vehicles": []
+    },
+    {
+      "frame_id": 64,
+      "timestamp_sec": 3.2,
+      "vehicles": []
+    },
+    {
+      "frame_id": 65,
+      "timestamp_sec": 3.25,
+      "vehicles": []
+    },
+    {
+      "frame_id": 66,
+      "timestamp_sec": 3.3,
+      "vehicles": []
+    },
+    {
+      "frame_id": 67,
+      "timestamp_sec": 3.35,
+      "vehicles": []
+    },
+    {
+      "frame_id": 68,
+      "timestamp_sec": 3.4,
+      "vehicles": []
+    },
+    {
+      "frame_id": 69,
+      "timestamp_sec": 3.45,
+      "vehicles": []
+    },
+    {
+      "frame_id": 70,
+      "timestamp_sec": 3.5,
+      "vehicles": []
+    },
+    {
+      "frame_id": 71,
+      "timestamp_sec": 3.55,
+      "vehicles": []
+    },
+    {
+      "frame_id": 72,
+      "timestamp_sec": 3.6,
+      "vehicles": []
+    },
+    {
+      "frame_id": 73,
+      "timestamp_sec": 3.65,
+      "vehicles": []
+    },
+    {
+      "frame_id": 74,
+      "timestamp_sec": 3.7,
+      "vehicles": []
+    },
+    {
+      "frame_id": 75,
+      "timestamp_sec": 3.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 76,
+      "timestamp_sec": 3.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 77,
+      "timestamp_sec": 3.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 78,
+      "timestamp_sec": 3.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 79,
+      "timestamp_sec": 3.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 80,
+      "timestamp_sec": 4.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 81,
+      "timestamp_sec": 4.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 82,
+      "timestamp_sec": 4.1,
+      "vehicles": []
+    },
+    {
+      "frame_id": 83,
+      "timestamp_sec": 4.15,
+      "vehicles": []
+    },
+    {
+      "frame_id": 84,
+      "timestamp_sec": 4.2,
+      "vehicles": []
+    },
+    {
+      "frame_id": 85,
+      "timestamp_sec": 4.25,
+      "vehicles": []
+    },
+    {
+      "frame_id": 86,
+      "timestamp_sec": 4.3,
+      "vehicles": []
+    },
+    {
+      "frame_id": 87,
+      "timestamp_sec": 4.35,
+      "vehicles": []
+    },
+    {
+      "frame_id": 88,
+      "timestamp_sec": 4.4,
+      "vehicles": []
+    },
+    {
+      "frame_id": 89,
+      "timestamp_sec": 4.45,
+      "vehicles": []
+    },
+    {
+      "frame_id": 90,
+      "timestamp_sec": 4.5,
+      "vehicles": []
+    },
+    {
+      "frame_id": 91,
+      "timestamp_sec": 4.55,
+      "vehicles": []
+    },
+    {
+      "frame_id": 92,
+      "timestamp_sec": 4.6,
+      "vehicles": []
+    },
+    {
+      "frame_id": 93,
+      "timestamp_sec": 4.65,
+      "vehicles": []
+    },
+    {
+      "frame_id": 94,
+      "timestamp_sec": 4.7,
+      "vehicles": []
+    },
+    {
+      "frame_id": 95,
+      "timestamp_sec": 4.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 96,
+      "timestamp_sec": 4.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 97,
+      "timestamp_sec": 4.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 98,
+      "timestamp_sec": 4.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 99,
+      "timestamp_sec": 4.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 100,
+      "timestamp_sec": 5.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 101,
+      "timestamp_sec": 5.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 102,
+      "timestamp_sec": 5.1,
+      "vehicles": []
+    },
+    {
+      "frame_id": 103,
+      "timestamp_sec": 5.15,
+      "vehicles": []
+    },
+    {
+      "frame_id": 104,
+      "timestamp_sec": 5.2,
+      "vehicles": []
+    },
+    {
+      "frame_id": 105,
+      "timestamp_sec": 5.25,
+      "vehicles": []
+    },
+    {
+      "frame_id": 106,
+      "timestamp_sec": 5.3,
+      "vehicles": []
+    },
+    {
+      "frame_id": 107,
+      "timestamp_sec": 5.35,
+      "vehicles": []
+    },
+    {
+      "frame_id": 108,
+      "timestamp_sec": 5.4,
+      "vehicles": []
+    },
+    {
+      "frame_id": 109,
+      "timestamp_sec": 5.45,
+      "vehicles": []
+    },
+    {
+      "frame_id": 110,
+      "timestamp_sec": 5.5,
+      "vehicles": []
+    },
+    {
+      "frame_id": 111,
+      "timestamp_sec": 5.55,
+      "vehicles": []
+    },
+    {
+      "frame_id": 112,
+      "timestamp_sec": 5.6,
+      "vehicles": []
+    },
+    {
+      "frame_id": 113,
+      "timestamp_sec": 5.65,
+      "vehicles": []
+    },
+    {
+      "frame_id": 114,
+      "timestamp_sec": 5.7,
+      "vehicles": []
+    },
+    {
+      "frame_id": 115,
+      "timestamp_sec": 5.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 116,
+      "timestamp_sec": 5.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 117,
+      "timestamp_sec": 5.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 118,
+      "timestamp_sec": 5.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 119,
+      "timestamp_sec": 5.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 120,
+      "timestamp_sec": 6.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 121,
+      "timestamp_sec": 6.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 122,
+      "timestamp_sec": 6.1,
+      "vehicles": []
+    },
+    {
+      "frame_id": 123,
+      "timestamp_sec": 6.15,
+      "vehicles": []
+    },
+    {
+      "frame_id": 124,
+      "timestamp_sec": 6.2,
+      "vehicles": []
+    },
+    {
+      "frame_id": 125,
+      "timestamp_sec": 6.25,
+      "vehicles": []
+    },
+    {
+      "frame_id": 126,
+      "timestamp_sec": 6.3,
+      "vehicles": []
+    },
+    {
+      "frame_id": 127,
+      "timestamp_sec": 6.35,
+      "vehicles": []
+    },
+    {
+      "frame_id": 128,
+      "timestamp_sec": 6.4,
+      "vehicles": []
+    },
+    {
+      "frame_id": 129,
+      "timestamp_sec": 6.45,
+      "vehicles": []
+    },
+    {
+      "frame_id": 130,
+      "timestamp_sec": 6.5,
+      "vehicles": []
+    },
+    {
+      "frame_id": 131,
+      "timestamp_sec": 6.55,
+      "vehicles": []
+    },
+    {
+      "frame_id": 132,
+      "timestamp_sec": 6.6,
+      "vehicles": []
+    },
+    {
+      "frame_id": 133,
+      "timestamp_sec": 6.65,
+      "vehicles": []
+    },
+    {
+      "frame_id": 134,
+      "timestamp_sec": 6.7,
+      "vehicles": []
+    },
+    {
+      "frame_id": 135,
+      "timestamp_sec": 6.75,
+      "vehicles": []
+    },
+    {
+      "frame_id": 136,
+      "timestamp_sec": 6.8,
+      "vehicles": []
+    },
+    {
+      "frame_id": 137,
+      "timestamp_sec": 6.85,
+      "vehicles": []
+    },
+    {
+      "frame_id": 138,
+      "timestamp_sec": 6.9,
+      "vehicles": []
+    },
+    {
+      "frame_id": 139,
+      "timestamp_sec": 6.95,
+      "vehicles": []
+    },
+    {
+      "frame_id": 140,
+      "timestamp_sec": 7.0,
+      "vehicles": []
+    },
+    {
+      "frame_id": 141,
+      "timestamp_sec": 7.05,
+      "vehicles": []
+    },
+    {
+      "frame_id": 142,
+      "timestamp_sec": 7.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.7361710465215,
+            0.0,
+            996.5156277447567,
+            2.9773345738240247
+          ],
+          "position_road_m": [
+            5.727999999999998,
+            104.27600000000001
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.477,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 143,
+      "timestamp_sec": 7.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.2951006043573,
+            0.0,
+            995.8748491489276,
+            5.673394648299959
+          ],
+          "position_road_m": [
+            5.7669999999999995,
+            104.99700000000001
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.516,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 144,
+      "timestamp_sec": 7.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            915.8801254171151,
+            0.0,
+            995.2650566778602,
+            8.303427979941759
+          ],
+          "position_road_m": [
+            5.805,
+            105.71700000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.555,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 145,
+      "timestamp_sec": 7.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            915.4589330437024,
+            0.0,
+            994.653235773222,
+            10.876913151483267
+          ],
+          "position_road_m": [
+            5.843999999999998,
+            106.43799999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.594,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 146,
+      "timestamp_sec": 7.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            915.0311730420764,
+            0.0,
+            994.0394137207426,
+            13.388750838006043
+          ],
+          "position_road_m": [
+            5.884,
+            107.15800000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.634,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 147,
+      "timestamp_sec": 7.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.5976339723012,
+            0.0,
+            993.4237179381552,
+            15.84786646097212
+          ],
+          "position_road_m": [
+            5.924999999999997,
+            107.87900000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.675,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 148,
+      "timestamp_sec": 7.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.1427745142604,
+            0.0,
+            992.7907289977444,
+            18.252614472965035
+          ],
+          "position_road_m": [
+            5.968,
+            108.60000000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.718,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 149,
+      "timestamp_sec": 7.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            913.6822794013477,
+            0.0,
+            992.1562396497328,
+            20.601536646801268
+          ],
+          "position_road_m": [
+            6.011999999999997,
+            109.32
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.762,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 150,
+      "timestamp_sec": 7.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            913.2014946680031,
+            0.0,
+            991.5052191068505,
+            22.899720075558978
+          ],
+          "position_road_m": [
+            6.058,
+            110.04000000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.808,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 151,
+      "timestamp_sec": 7.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.7010713087841,
+            0.0,
+            990.8381978870495,
+            25.14879119341524
+          ],
+          "position_road_m": [
+            6.105999999999998,
+            110.75999999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.855,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 152,
+      "timestamp_sec": 7.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.1967480062091,
+            0.0,
+            990.170576367617,
+            27.353317120994962
+          ],
+          "position_road_m": [
+            6.154999999999998,
+            111.481
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.905,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 153,
+      "timestamp_sec": 7.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            911.6880336236719,
+            0.0,
+            989.5022054917237,
+            29.508679781302675
+          ],
+          "position_road_m": [
+            6.204999999999998,
+            112.20100000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.955,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 154,
+      "timestamp_sec": 7.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            911.1753648160422,
+            0.0,
+            988.8331870469215,
+            31.619399883129486
+          ],
+          "position_road_m": [
+            6.256,
+            112.92099999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.006,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 155,
+      "timestamp_sec": 7.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            910.658863328002,
+            0.0,
+            988.1635410919895,
+            33.68685018616764
+          ],
+          "position_road_m": [
+            6.308,
+            113.64100000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.057,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 156,
+      "timestamp_sec": 7.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            910.1812463764168,
+            0.0,
+            987.5358903077222,
+            35.71230692737825
+          ],
+          "position_road_m": [
+            6.357999999999997,
+            114.36099999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.108,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 157,
+      "timestamp_sec": 7.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            909.727616798218,
+            0.0,
+            986.9350406525906,
+            37.69977796597089
+          ],
+          "position_road_m": [
+            6.407,
+            115.082
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.157,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 158,
+      "timestamp_sec": 7.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            909.3244409978222,
+            0.0,
+            986.3877785804145,
+            39.64494263500269
+          ],
+          "position_road_m": [
+            6.452999999999999,
+            115.80200000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.203,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 159,
+      "timestamp_sec": 7.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.9571039471402,
+            0.0,
+            985.8790011512074,
+            41.554387745092896
+          ],
+          "position_road_m": [
+            6.497,
+            116.52300000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.246,
+          "speed_est_mps": 14.438888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 160,
+      "timestamp_sec": 8.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.6788147900758,
+            0.0,
+            985.4620398054091,
+            43.42646229299907
+          ],
+          "position_road_m": [
+            6.535,
+            117.24400000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.285,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 161,
+      "timestamp_sec": 8.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.4734760701979,
+            0.0,
+            985.1207156957385,
+            45.26226505520278
+          ],
+          "position_road_m": [
+            6.567999999999998,
+            117.96500000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.318,
+          "speed_est_mps": 14.43611111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 162,
+      "timestamp_sec": 8.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.3523754923735,
+            0.0,
+            984.8662400858639,
+            47.0628279878795
+          ],
+          "position_road_m": [
+            6.594999999999999,
+            118.68600000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.345,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 163,
+      "timestamp_sec": 8.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.3396296998684,
+            0.0,
+            984.7226569283752,
+            48.82913241515845
+          ],
+          "position_road_m": [
+            6.613999999999997,
+            119.40700000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.364,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 164,
+      "timestamp_sec": 8.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.4321839509728,
+            0.0,
+            984.6868397400415,
+            50.56214684757403
+          ],
+          "position_road_m": [
+            6.625,
+            120.12800000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.375,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 165,
+      "timestamp_sec": 8.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.6401079089173,
+            0.0,
+            984.7687899674609,
+            52.26279220966329
+          ],
+          "position_road_m": [
+            6.626999999999999,
+            120.84899999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.377,
+          "speed_est_mps": 14.419444444444443
+        }
+      ]
+    },
+    {
+      "frame_id": 166,
+      "timestamp_sec": 8.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            908.9859905390215,
+            0.0,
+            984.9910316826645,
+            53.931944560818806
+          ],
+          "position_road_m": [
+            6.6179999999999986,
+            121.57
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.368,
+          "speed_est_mps": 14.416666666666666
+        }
+      ]
+    },
+    {
+      "frame_id": 167,
+      "timestamp_sec": 8.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            909.4529723540875,
+            0.0,
+            985.3368072045096,
+            55.56822951930288
+          ],
+          "position_road_m": [
+            6.599,
+            122.29000000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.349,
+          "speed_est_mps": 14.411111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 168,
+      "timestamp_sec": 8.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            910.0507395691889,
+            0.35118221246838033,
+            985.815568887612,
+            57.17480420128584
+          ],
+          "position_road_m": [
+            6.568999999999999,
+            123.00999999999999
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.319,
+          "speed_est_mps": 14.405555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 169,
+      "timestamp_sec": 8.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            910.7754939812506,
+            2.014203753592092,
+            986.4236200336301,
+            58.75029829287672
+          ],
+          "position_road_m": [
+            6.527999999999999,
+            123.72900000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.277,
+          "speed_est_mps": 14.4
+        }
+      ]
+    },
+    {
+      "frame_id": 170,
+      "timestamp_sec": 8.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            911.6487515489001,
+            3.6453336891288117,
+            987.1824123426455,
+            60.29557928443782
+          ],
+          "position_road_m": [
+            6.474,
+            124.447
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.224,
+          "speed_est_mps": 14.397222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 171,
+      "timestamp_sec": 8.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.641987481361,
+            5.245497091109549,
+            988.0633561065463,
+            61.81152355999852
+          ],
+          "position_road_m": [
+            6.408999999999999,
+            125.16400000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.159,
+          "speed_est_mps": 14.394444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 172,
+      "timestamp_sec": 8.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            913.7518722948666,
+            6.813387501589908,
+            989.0632135228252,
+            63.29689342255886
+          ],
+          "position_road_m": [
+            6.332999999999998,
+            125.87900000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.083,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 173,
+      "timestamp_sec": 8.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.987818444757,
+            8.352080090313834,
+            990.1911812454367,
+            64.75460219082363
+          ],
+          "position_road_m": [
+            6.244999999999997,
+            126.59300000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.995,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 174,
+      "timestamp_sec": 8.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.3226366710878,
+            9.862398533091458,
+            991.4200122126254,
+            66.18543018924454
+          ],
+          "position_road_m": [
+            6.1469999999999985,
+            127.30600000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.897,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 175,
+      "timestamp_sec": 8.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            917.753692227038,
+            11.343049215696603,
+            992.7471624575154,
+            67.58815188855468
+          ],
+          "position_road_m": [
+            6.038999999999998,
+            128.017
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.788,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 176,
+      "timestamp_sec": 8.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            919.2788517127643,
+            12.796912208060455,
+            994.1702964700934,
+            68.96549577605727
+          ],
+          "position_road_m": [
+            5.920999999999999,
+            128.72700000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.671,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 177,
+      "timestamp_sec": 8.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            920.8605560071954,
+            14.222733602615868,
+            995.6519431228013,
+            70.3162739393203
+          ],
+          "position_road_m": [
+            5.795999999999999,
+            129.435
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.546,
+          "speed_est_mps": 14.391666666666667
+        }
+      ]
+    },
+    {
+      "frame_id": 178,
+      "timestamp_sec": 8.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            922.5094060325639,
+            15.625223372019441,
+            997.2023728134748,
+            71.64494845770263
+          ],
+          "position_road_m": [
+            5.663,
+            130.14300000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.413,
+          "speed_est_mps": 14.394444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 179,
+      "timestamp_sec": 8.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            924.1774640397325,
+            17.001117509357165,
+            998.7738768460933,
+            72.94842711412784
+          ],
+          "position_road_m": [
+            5.526,
+            130.849
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.275,
+          "speed_est_mps": 14.397222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 180,
+      "timestamp_sec": 9.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            925.8759904452598,
+            18.35494802186644,
+            1000.3773976016201,
+            74.23100338913663
+          ],
+          "position_road_m": [
+            5.384,
+            131.555
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.133,
+          "speed_est_mps": 14.4
+        }
+      ]
+    },
+    {
+      "frame_id": 181,
+      "timestamp_sec": 9.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            927.5815108129436,
+            19.685385664885146,
+            1001.9895539241797,
+            75.49141799831224
+          ],
+          "position_road_m": [
+            5.238999999999997,
+            132.26
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.011,
+          "speed_est_mps": 14.402777777777779
+        }
+      ]
+    },
+    {
+      "frame_id": 182,
+      "timestamp_sec": 9.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            929.2715086483944,
+            20.996734976535038,
+            1003.5875272465322,
+            76.73374892513846
+          ],
+          "position_road_m": [
+            5.093,
+            132.966
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.157,
+          "speed_est_mps": 14.405555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 183,
+      "timestamp_sec": 9.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            930.9239044744941,
+            22.285785828594662,
+            1005.1494633637155,
+            77.95495499551073
+          ],
+          "position_road_m": [
+            4.948,
+            133.671
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.302,
+          "speed_est_mps": 14.408333333333331
+        }
+      ]
+    },
+    {
+      "frame_id": 184,
+      "timestamp_sec": 9.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            932.5396483662677,
+            23.556674396967658,
+            1006.6760220927962,
+            79.1589546918641
+          ],
+          "position_road_m": [
+            4.8039999999999985,
+            134.377
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.446,
+          "speed_est_mps": 14.408333333333331
+        }
+      ]
+    },
+    {
+      "frame_id": 185,
+      "timestamp_sec": 9.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            934.0865541610958,
+            24.809803868560785,
+            1008.1349889773371,
+            80.3461299807418
+          ],
+          "position_road_m": [
+            4.663999999999998,
+            135.084
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.586,
+          "speed_est_mps": 14.411111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 186,
+      "timestamp_sec": 9.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            935.5661711393285,
+            26.043806393974414,
+            1009.5280092871197,
+            81.51518500481787
+          ],
+          "position_road_m": [
+            4.527999999999999,
+            135.791
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.722,
+          "speed_est_mps": 14.411111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 187,
+      "timestamp_sec": 9.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            936.9583044835616,
+            27.262548147199666,
+            1010.8346168942845,
+            82.66978245524179
+          ],
+          "position_road_m": [
+            4.398,
+            136.5
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.852,
+          "speed_est_mps": 14.408333333333331
+        }
+      ]
+    },
+    {
+      "frame_id": 188,
+      "timestamp_sec": 9.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            938.243407296738,
+            28.464630525259423,
+            1012.0353630493514,
+            83.80859733971946
+          ],
+          "position_road_m": [
+            4.276,
+            137.21000000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.974,
+          "speed_est_mps": 14.405555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 189,
+      "timestamp_sec": 9.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            939.4238472161254,
+            29.650389002841266,
+            1013.1325918475051,
+            84.93194747637594
+          ],
+          "position_road_m": [
+            4.161999999999999,
+            137.921
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.089,
+          "speed_est_mps": 14.402777777777779
+        }
+      ]
+    },
+    {
+      "frame_id": 190,
+      "timestamp_sec": 9.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            940.5019281275386,
+            30.820150119393446,
+            1014.128584259511,
+            86.04014221837274
+          ],
+          "position_road_m": [
+            4.055999999999997,
+            138.63300000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.194,
+          "speed_est_mps": 14.4
+        }
+      ]
+    },
+    {
+      "frame_id": 191,
+      "timestamp_sec": 9.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            941.448293927736,
+            31.975863013941918,
+            1014.993847400442,
+            87.1350281184713
+          ],
+          "position_road_m": [
+            3.9609999999999985,
+            139.34700000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.289,
+          "speed_est_mps": 14.397222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 192,
+      "timestamp_sec": 9.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            942.2658913752944,
+            33.11618118561097,
+            1015.7314225201637,
+            88.21532954426303
+          ],
+          "position_road_m": [
+            3.876999999999999,
+            140.062
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.373,
+          "speed_est_mps": 14.394444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 193,
+      "timestamp_sec": 9.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            942.9679765965433,
+            34.239838137659284,
+            1016.3546546219708,
+            89.27984665672984
+          ],
+          "position_road_m": [
+            3.8029999999999973,
+            140.77700000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.447,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 194,
+      "timestamp_sec": 9.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            943.5363185444219,
+            35.35028762200525,
+            1016.845070290246,
+            90.3318514313734
+          ],
+          "position_road_m": [
+            3.7409999999999997,
+            141.49400000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.509,
+          "speed_est_mps": 14.386111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 195,
+      "timestamp_sec": 9.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            943.9842038215487,
+            36.44470860377429,
+            1017.2161540949681,
+            91.3686713088388
+          ],
+          "position_road_m": [
+            3.6899999999999977,
+            142.211
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.56,
+          "speed_est_mps": 14.383333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 196,
+      "timestamp_sec": 9.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.3141263089649,
+            37.52493969682737,
+            1017.4702708916436,
+            92.39204813383645
+          ],
+          "position_road_m": [
+            3.6499999999999986,
+            142.92900000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.6,
+          "speed_est_mps": 14.383333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 197,
+      "timestamp_sec": 9.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.5185549089442,
+            38.591258867704965,
+            1017.5998700761229,
+            93.40224524308891
+          ],
+          "position_road_m": [
+            3.622,
+            143.64800000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.628,
+          "speed_est_mps": 14.380555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 198,
+      "timestamp_sec": 9.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.6202396805783,
+            39.64246376540085,
+            1017.6277860830063,
+            94.39812356722186
+          ],
+          "position_road_m": [
+            3.603999999999999,
+            144.36700000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.646,
+          "speed_est_mps": 14.380555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 199,
+      "timestamp_sec": 9.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.6213598345951,
+            40.67887347156179,
+            1017.5561757313276,
+            95.37998539411117
+          ],
+          "position_road_m": [
+            3.596,
+            145.086
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.654,
+          "speed_est_mps": 14.380555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 200,
+      "timestamp_sec": 10.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.5240336677639,
+            41.700798148968985,
+            1017.3871355520469,
+            96.34812456218114
+          ],
+          "position_road_m": [
+            3.597999999999999,
+            145.805
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.652,
+          "speed_est_mps": 14.380555555555556
+        }
+      ]
+    },
+    {
+      "frame_id": 201,
+      "timestamp_sec": 10.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.3303206764356,
+            42.708539350997896,
+            1017.1227038798743,
+            97.30282675357695
+          ],
+          "position_road_m": [
+            3.6099999999999994,
+            146.524
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.641,
+          "speed_est_mps": 14.383333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 202,
+      "timestamp_sec": 10.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            944.0714448783046,
+            43.70099769251922,
+            1016.7941818823383,
+            98.24305044554453
+          ],
+          "position_road_m": [
+            3.628999999999998,
+            147.24200000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.621,
+          "speed_est_mps": 14.383333333333333
+        }
+      ]
+    },
+    {
+      "frame_id": 203,
+      "timestamp_sec": 10.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            943.748546966227,
+            44.68122303664879,
+            1016.4024962268131,
+            99.17168498208832
+          ],
+          "position_road_m": [
+            3.6549999999999976,
+            147.961
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.595,
+          "speed_est_mps": 14.386111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 204,
+      "timestamp_sec": 10.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            943.3630415572356,
+            45.64810193146582,
+            1015.9491396673081,
+            100.08767551402025
+          ],
+          "position_road_m": [
+            3.687999999999999,
+            148.68
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.562,
+          "speed_est_mps": 14.388888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 205,
+      "timestamp_sec": 10.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            942.9257125800156,
+            46.60189867523029,
+            1015.4448775852626,
+            100.99127242916553
+          ],
+          "position_road_m": [
+            3.7270000000000003,
+            149.399
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.523,
+          "speed_est_mps": 14.391666666666667
+        }
+      ]
+    },
+    {
+      "frame_id": 206,
+      "timestamp_sec": 10.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            942.4565816381908,
+            47.54156476187739,
+            1014.9098051636731,
+            101.8814824059891
+          ],
+          "position_road_m": [
+            3.7699999999999996,
+            150.11700000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.48,
+          "speed_est_mps": 14.397222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 207,
+      "timestamp_sec": 10.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            941.95619561436,
+            48.46869156704617,
+            1014.3443576096549,
+            102.75981306351743
+          ],
+          "position_road_m": [
+            3.817,
+            150.83500000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.433,
+          "speed_est_mps": 14.4
+        }
+      ]
+    },
+    {
+      "frame_id": 208,
+      "timestamp_sec": 10.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            941.4251048168182,
+            49.384793652856956,
+            1013.7489789464423,
+            103.62769925007501
+          ],
+          "position_road_m": [
+            3.8679999999999986,
+            151.55400000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.382,
+          "speed_est_mps": 14.402777777777779
+        }
+      ]
+    },
+    {
+      "frame_id": 209,
+      "timestamp_sec": 10.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            940.8825829054267,
+            50.287554472050005,
+            1013.1431053986162,
+            104.48294634194211
+          ],
+          "position_road_m": [
+            3.9209999999999994,
+            152.272
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.329,
+          "speed_est_mps": 14.405555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 210,
+      "timestamp_sec": 10.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            940.3287782191837,
+            51.17849311279016,
+            1012.5267787024968,
+            105.32699347527489
+          ],
+          "position_road_m": [
+            3.975999999999999,
+            152.99
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.274,
+          "speed_est_mps": 14.408333333333331
+        }
+      ]
+    },
+    {
+      "frame_id": 211,
+      "timestamp_sec": 10.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            939.7639113211133,
+            52.05784029161305,
+            1011.9002032304738,
+            106.16005922363341
+          ],
+          "position_road_m": [
+            4.032999999999998,
+            153.70800000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.218,
+          "speed_est_mps": 14.411111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 212,
+      "timestamp_sec": 10.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            939.206302782575,
+            52.92700959836231,
+            1011.2816003546197,
+            106.98348277739588
+          ],
+          "position_road_m": [
+            4.09,
+            154.42700000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.16,
+          "speed_est_mps": 14.413888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 213,
+      "timestamp_sec": 10.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            938.6288591321716,
+            53.783821308612545,
+            1010.6440295666548,
+            107.79519913447504
+          ],
+          "position_road_m": [
+            4.149999999999999,
+            155.14500000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.101,
+          "speed_est_mps": 14.413888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 214,
+      "timestamp_sec": 10.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            938.0587920344026,
+            54.62968767956629,
+            1010.0146034253103,
+            108.59654622274701
+          ],
+          "position_road_m": [
+            4.209999999999997,
+            155.863
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -1.041,
+          "speed_est_mps": 14.416666666666666
+        }
+      ]
+    },
+    {
+      "frame_id": 215,
+      "timestamp_sec": 10.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            937.4870557784251,
+            55.46482275773869,
+            1009.3842611989347,
+            109.38772682312086
+          ],
+          "position_road_m": [
+            4.270999999999997,
+            156.58100000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.979,
+          "speed_est_mps": 14.419444444444443
+        }
+      ]
+    },
+    {
+      "frame_id": 216,
+      "timestamp_sec": 10.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            936.913652610557,
+            56.29057021633815,
+            1008.7529108409896,
+            110.17001388916246
+          ],
+          "position_road_m": [
+            4.332999999999998,
+            157.3
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.917,
+          "speed_est_mps": 14.422222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 217,
+      "timestamp_sec": 10.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            936.3210903886661,
+            57.104843172094284,
+            1008.1032066572911,
+            110.94143037356301
+          ],
+          "position_road_m": [
+            4.398,
+            158.01800000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.853,
+          "speed_est_mps": 14.422222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 218,
+      "timestamp_sec": 10.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            935.7271707388907,
+            57.90897852307134,
+            1007.4528564565699,
+            111.70324281133074
+          ],
+          "position_road_m": [
+            4.463999999999999,
+            158.736
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.787,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 219,
+      "timestamp_sec": 10.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            935.1232343437025,
+            58.70316978563517,
+            1006.7931873412017,
+            112.45563453375964
+          ],
+          "position_road_m": [
+            4.532,
+            159.454
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.718,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 220,
+      "timestamp_sec": 11.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            934.500835070851,
+            59.48760558549892,
+            1006.1157399420442,
+            113.19878423889371
+          ],
+          "position_road_m": [
+            4.602999999999998,
+            160.17200000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.647,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 221,
+      "timestamp_sec": 11.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            933.8517359177296,
+            60.261397749888545,
+            1005.4123395844041,
+            113.93185049989441
+          ],
+          "position_road_m": [
+            4.677999999999997,
+            160.889
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.573,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 222,
+      "timestamp_sec": 11.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            933.1849364631324,
+            61.025813252227806,
+            1004.6918969366603,
+            114.65603360737371
+          ],
+          "position_road_m": [
+            4.756,
+            161.606
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.495,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 223,
+      "timestamp_sec": 11.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            932.4922824195156,
+            61.781026615946445,
+            1003.9462454640105,
+            115.37149889931769
+          ],
+          "position_road_m": [
+            4.837999999999997,
+            162.32300000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.412,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 224,
+      "timestamp_sec": 11.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            931.7658001879079,
+            62.52617420905452,
+            1003.1674721732375,
+            116.07742819805165
+          ],
+          "position_road_m": [
+            4.924999999999997,
+            163.03900000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.325,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 225,
+      "timestamp_sec": 11.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            931.0060974679508,
+            63.26247550747323,
+            1002.3560991867247,
+            116.77497679655359
+          ],
+          "position_road_m": [
+            5.0169999999999995,
+            163.755
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.234,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 226,
+      "timestamp_sec": 11.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            930.2137091331228,
+            63.9880680098332,
+            1001.5127920798011,
+            117.46238021984198
+          ],
+          "position_road_m": [
+            5.113999999999997,
+            164.469
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.136,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 227,
+      "timestamp_sec": 11.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            929.389240477199,
+            64.7051710578873,
+            1000.6380004029612,
+            118.14174100220902
+          ],
+          "position_road_m": [
+            5.2159999999999975,
+            165.183
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": -0.034,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 228,
+      "timestamp_sec": 11.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            928.5167575925282,
+            65.41295625379895,
+            999.7158483817352,
+            118.81227434570427
+          ],
+          "position_road_m": [
+            5.324999999999999,
+            165.89600000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.074,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 229,
+      "timestamp_sec": 11.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            927.6216615539834,
+            66.11256262250865,
+            998.7716571594215,
+            119.47505932658714
+          ],
+          "position_road_m": [
+            5.437999999999999,
+            166.60900000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.188,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 230,
+      "timestamp_sec": 11.5,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            926.687967387623,
+            66.8022133340724,
+            997.7895664518986,
+            120.12841263227912
+          ],
+          "position_road_m": [
+            5.556999999999999,
+            167.32
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.307,
+          "speed_est_mps": 14.424999999999999
+        }
+      ]
+    },
+    {
+      "frame_id": 231,
+      "timestamp_sec": 11.55,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            925.724504050308,
+            67.48401228935128,
+            996.7782575738624,
+            120.77432743201702
+          ],
+          "position_road_m": [
+            5.680999999999997,
+            168.031
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.43,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 232,
+      "timestamp_sec": 11.6,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            924.7477892514522,
+            68.15714174849487,
+            995.7543056199789,
+            121.41202902488988
+          ],
+          "position_road_m": [
+            5.808,
+            168.74100000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.558,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 233,
+      "timestamp_sec": 11.65,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            923.7420342120026,
+            68.821773221646,
+            994.701909775396,
+            122.04167989419095
+          ],
+          "position_road_m": [
+            5.939999999999998,
+            169.45
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.69,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 234,
+      "timestamp_sec": 11.7,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            922.7316396680659,
+            69.47897217992465,
+            993.6453960063169,
+            122.66428943361282
+          ],
+          "position_road_m": [
+            6.073999999999998,
+            170.159
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.824,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 235,
+      "timestamp_sec": 11.75,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            921.7165903951761,
+            70.12795192558815,
+            992.5848042951347,
+            123.27911235055718
+          ],
+          "position_road_m": [
+            6.209999999999997,
+            170.86700000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 0.96,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 236,
+      "timestamp_sec": 11.8,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            920.7050029899921,
+            70.77066071342115,
+            991.5281145188748,
+            123.8879943600832
+          ],
+          "position_road_m": [
+            6.346999999999998,
+            171.57600000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.097,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 237,
+      "timestamp_sec": 11.85,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            919.7123739849596,
+            71.40628765392997,
+            990.4908801145084,
+            124.49016725109155
+          ],
+          "position_road_m": [
+            6.482999999999997,
+            172.28500000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.233,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 238,
+      "timestamp_sec": 11.9,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            918.746167803355,
+            72.03494484991498,
+            989.4805576384487,
+            125.08573722623524
+          ],
+          "position_road_m": [
+            6.616999999999997,
+            172.99400000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.367,
+          "speed_est_mps": 14.433333333333334
+        }
+      ]
+    },
+    {
+      "frame_id": 239,
+      "timestamp_sec": 11.95,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            917.8136861306575,
+            72.6567420538539,
+            988.5044410742466,
+            125.6748082615458
+          ],
+          "position_road_m": [
+            6.747999999999999,
+            173.70300000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.498,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 240,
+      "timestamp_sec": 12.0,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.9300179326026,
+            73.27350654798079,
+            987.5774911573058,
+            126.25911146650812
+          ],
+          "position_road_m": [
+            6.873999999999999,
+            174.41400000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.623,
+          "speed_est_mps": 14.430555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 241,
+      "timestamp_sec": 12.05,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            916.1094466352455,
+            73.88357840382704,
+            986.7141077998891,
+            126.83707427730984
+          ],
+          "position_road_m": [
+            6.9929999999999986,
+            175.125
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.743,
+          "speed_est_mps": 14.427777777777777
+        }
+      ]
+    },
+    {
+      "frame_id": 242,
+      "timestamp_sec": 12.1,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            915.3512296337763,
+            74.48875309591551,
+            985.9134223989752,
+            127.4103976698147
+          ],
+          "position_road_m": [
+            7.104999999999999,
+            175.83800000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.855,
+          "speed_est_mps": 14.422222222222222
+        }
+      ]
+    },
+    {
+      "frame_id": 243,
+      "timestamp_sec": 12.15,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.669249997646,
+            75.08740534276913,
+            985.1894320788552,
+            127.97754190367601
+          ],
+          "position_road_m": [
+            7.207999999999998,
+            176.55100000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 1.958,
+          "speed_est_mps": 14.416666666666666
+        }
+      ]
+    },
+    {
+      "frame_id": 244,
+      "timestamp_sec": 12.2,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            914.0701069110968,
+            75.68128729264924,
+            984.5486130659987,
+            128.5401669088256
+          ],
+          "position_road_m": [
+            7.300999999999998,
+            177.26600000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.051,
+          "speed_est_mps": 14.413888888888888
+        }
+      ]
+    },
+    {
+      "frame_id": 245,
+      "timestamp_sec": 12.25,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            913.5598441341792,
+            76.26962832984003,
+            983.9970631987519,
+            129.0975426282695
+          ],
+          "position_road_m": [
+            7.382999999999999,
+            177.98200000000003
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.133,
+          "speed_est_mps": 14.405555555555555
+        }
+      ]
+    },
+    {
+      "frame_id": 246,
+      "timestamp_sec": 12.3,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            913.1518051322166,
+            76.85168797929308,
+            983.5481779055997,
+            129.6489675593303
+          ],
+          "position_road_m": [
+            7.451999999999998,
+            178.69800000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.202,
+          "speed_est_mps": 14.394444444444444
+        }
+      ]
+    },
+    {
+      "frame_id": 247,
+      "timestamp_sec": 12.35,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.8445266530857,
+            77.42836604689911,
+            983.2004307901454,
+            130.1952941496939
+          ],
+          "position_road_m": [
+            7.507999999999999,
+            179.41500000000002
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.257,
+          "speed_est_mps": 14.386111111111111
+        }
+      ]
+    },
+    {
+      "frame_id": 248,
+      "timestamp_sec": 12.4,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.658538029657,
+            77.99972376806193,
+            982.9743468880387,
+            130.73658041184814
+          ],
+          "position_road_m": [
+            7.547999999999998,
+            180.13300000000004
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.298,
+          "speed_est_mps": 14.375
+        }
+      ]
+    },
+    {
+      "frame_id": 249,
+      "timestamp_sec": 12.45,
+      "vehicles": [
+        {
+          "track_id": 146,
+          "bbox_pixel": [
+            912.5771272767159,
+            78.56505757804354,
+            982.8532635870287,
+            131.27215981077808
+          ],
+          "position_road_m": [
+            7.573999999999998,
+            180.851
+          ],
+          "lane_id": 2,
+          "lateral_offset_m": 2.324,
+          "speed_est_mps": 14.366666666666665
+        }
+      ]
+    }
+  ]
+}

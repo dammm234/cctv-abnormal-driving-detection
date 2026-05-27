@@ -1,0 +1,98 @@
+{
+  "normal_50kmh": {
+    "lateral_offset_max": 0.444,
+    "lateral_offset_std": 0.16022883136314764,
+    "speed_min": 5.133333333333334,
+    "speed_max": 16.180555555555554,
+    "speed_mean": 13.727311111111108,
+    "speed_std": 3.520199256706015,
+    "speed_max_kmh": 58.24999999999999,
+    "speed_mean_kmh": 49.41831999999999,
+    "speed_std_kmh": 12.672717324141654,
+    "visible_frames": 250
+  },
+  "normal_60kmh": {
+    "lateral_offset_max": 0.461,
+    "lateral_offset_std": 0.16655069983641618,
+    "speed_min": 6.563888888888888,
+    "speed_max": 16.836111111111112,
+    "speed_mean": 14.100011111111112,
+    "speed_std": 3.207477764691075,
+    "speed_max_kmh": 60.61000000000001,
+    "speed_mean_kmh": 50.760040000000004,
+    "speed_std_kmh": 11.546919952887869,
+    "visible_frames": 250
+  },
+  "wobble_mild": {
+    "lateral_offset_max": 1.105,
+    "lateral_offset_std": 0.6048956686900643,
+    "speed_min": 14.4,
+    "speed_max": 16.836111111111112,
+    "speed_mean": 14.6023,
+    "speed_std": 0.5448220800306179,
+    "speed_max_kmh": 60.61000000000001,
+    "speed_mean_kmh": 52.56828,
+    "speed_std_kmh": 1.9613594881102245,
+    "visible_frames": 250
+  },
+  "wobble_medium": {
+    "lateral_offset_max": 2.324,
+    "lateral_offset_std": 0.9258239248669263,
+    "speed_min": 14.366666666666665,
+    "speed_max": 16.836111111111112,
+    "speed_mean": 14.599966666666667,
+    "speed_std": 0.5476959304415384,
+    "speed_max_kmh": 60.61000000000001,
+    "speed_mean_kmh": 52.55988,
+    "speed_std_kmh": 1.9717053495895382,
+    "visible_frames": 250
+  },
+  "wobble_strong": {
+    "lateral_offset_max": 3.015,
+    "lateral_offset_std": 1.287243796153627,
+    "speed_min": 14.180555555555554,
+    "speed_max": 16.836111111111112,
+    "speed_mean": 14.56888888888889,
+    "speed_std": 0.5750345131885779,
+    "speed_max_kmh": 60.61000000000001,
+    "speed_mean_kmh": 52.44800000000001,
+    "speed_std_kmh": 2.0701242474788804,
+    "visible_frames": 250
+  },
+  "abrupt_mild": {
+    "lateral_offset_max": 0.36,
+    "lateral_offset_std": 0.10206714840731076,
+    "speed_min": 7.833333333333333,
+    "speed_max": 19.477777777777778,
+    "speed_mean": 12.946966666666667,
+    "speed_std": 2.9211880028973836,
+    "speed_max_kmh": 70.12,
+    "speed_mean_kmh": 46.60908,
+    "speed_std_kmh": 10.51627681043058,
+    "visible_frames": 250
+  },
+  "abrupt_medium": {
+    "lateral_offset_max": 0.381,
+    "lateral_offset_std": 0.10960468785594894,
+    "speed_min": 6.061111111111111,
+    "speed_max": 24.041666666666664,
+    "speed_mean": 14.262355555555557,
+    "speed_std": 4.67001936385337,
+    "speed_max_kmh": 86.55,
+    "speed_mean_kmh": 51.344480000000004,
+    "speed_std_kmh": 16.81206970987213,
+    "visible_frames": 250
+  },
+  "abrupt_strong": {
+    "lateral_offset_max": 0.4,
+    "lateral_offset_std": 0.11698497168440056,
+    "speed_min": 4.558333333333334,
+    "speed_max": 27.005555555555553,
+    "speed_mean": 15.300400000000002,
+    "speed_std": 5.687764376750508,
+    "speed_max_kmh": 97.22,
+    "speed_mean_kmh": 55.08144000000001,
+    "speed_std_kmh": 20.47595175630183,
+    "visible_frames": 250
+  }
+}
