@@ -1,0 +1,45 @@
+{
+  "video_id": "v06",
+  "video_file": "v06.mp4",
+  "src_pts": [
+    [
+      745.0,
+      200.0
+    ],
+    [
+      992.0,
+      200.0
+    ],
+    [
+      560.0,
+      500.0
+    ],
+    [
+      115.0,
+      500.0
+    ]
+  ],
+  "dst_pts": [
+    [
+      0.0,
+      30.0
+    ],
+    [
+      14.0,
+      30.0
+    ],
+    [
+      14.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "lane_width_m": 3.5,
+  "num_lanes": 4,
+  "road_width_m": 14.0,
+  "segment_length_m": 30.0,
+  "note": "4-lane road (Yangjae IC to Banpo IC direction, congested)"
+}

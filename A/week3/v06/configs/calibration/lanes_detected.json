@@ -1,0 +1,29 @@
+{
+  "video_id": "v06",
+  "method": "opencv_hough_dbscan",
+  "angle_range": "25-45",
+  "num_lanes_detected": 2,
+  "num_lanes_expected": 5,
+  "lanes": [
+    {
+      "lane_idx": 0,
+      "x_top": 888,
+      "y_top": 200,
+      "x_bot": 350,
+      "y_bot": 500,
+      "x_center_at_mid_y": 625.6590752242926,
+      "num_pieces": 4
+    },
+    {
+      "lane_idx": 1,
+      "x_top": 950,
+      "y_top": 200,
+      "x_bot": 483,
+      "y_bot": 500,
+      "x_center_at_mid_y": 719.1483835149728,
+      "num_pieces": 53
+    }
+  ],
+  "reliability": "medium",
+  "note": "4차로 분리선 3개 중 2개 검출. 도로 양 끝 실선은 OpenCV 한계로 미검출. 호모그래피 기반 lane_id로 4차로 분석 정상 수행."
+}
