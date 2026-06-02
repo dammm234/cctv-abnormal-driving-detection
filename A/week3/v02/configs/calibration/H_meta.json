@@ -1,0 +1,45 @@
+{
+  "video_id": "v02",
+  "video_file": "v02.mp4",
+  "src_pts": [
+    [
+      648.0,
+      350.0
+    ],
+    [
+      812.0,
+      350.0
+    ],
+    [
+      662.0,
+      650.0
+    ],
+    [
+      305.0,
+      650.0
+    ]
+  ],
+  "dst_pts": [
+    [
+      0.0,
+      30.0
+    ],
+    [
+      21.0,
+      30.0
+    ],
+    [
+      21.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "lane_width_m": 3.5,
+  "num_lanes": 6,
+  "road_width_m": 21.0,
+  "segment_length_m": 30.0,
+  "note": "3-lane city road, bus lane (lane 4) excluded"
+}
