@@ -1,0 +1,20 @@
+{
+  "video_id": "v04",
+  "method": "opencv_hough_dbscan",
+  "angle_range": "30-50",
+  "num_lanes_detected": 1,
+  "num_lanes_expected": 5,
+  "lanes": [
+    {
+      "lane_idx": 0,
+      "x_top": 740,
+      "y_top": 220,
+      "x_bot": 492,
+      "y_bot": 400,
+      "x_center_at_mid_y": 612.5266058338125,
+      "num_pieces": 8
+    }
+  ],
+  "reliability": "low",
+  "note": "4차로 도시 도로에서 OpenCV 차선 검출 한계 확인. 여러 방법 시도(임계값 조정 등) 후에도 1개 차선만 검출. 원인: 호모그래피 영역이 도로의 일부만 차지하여 차선 마킹 적게 잡힘. 호모그래피 기반 lane_id로 4차로 분석 정상 수행."
+}

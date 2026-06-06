@@ -1,0 +1,45 @@
+{
+  "video_id": "v05",
+  "video_file": "v05.mp4",
+  "src_pts": [
+    [
+      645.0,
+      300.0
+    ],
+    [
+      805.0,
+      300.0
+    ],
+    [
+      495.0,
+      600.0
+    ],
+    [
+      160.0,
+      600.0
+    ]
+  ],
+  "dst_pts": [
+    [
+      0.0,
+      30.0
+    ],
+    [
+      17.5,
+      30.0
+    ],
+    [
+      17.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "lane_width_m": 3.5,
+  "num_lanes": 5,
+  "road_width_m": 17.5,
+  "segment_length_m": 30.0,
+  "note": "5-lane road (Olympic-daero, Dunchon direction)"
+}

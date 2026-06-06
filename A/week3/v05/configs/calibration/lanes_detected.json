@@ -1,0 +1,36 @@
+{
+  "video_id": "v05",
+  "method": "opencv_hough_dbscan",
+  "angle_range": "30-50",
+  "num_lanes_detected": 3,
+  "num_lanes_expected": 6,
+  "lanes": [
+    {
+      "lane_idx": 0,
+      "x_top": 647,
+      "y_top": 300,
+      "x_bot": 164,
+      "y_bot": 600,
+      "x_center_at_mid_y": 406.6074370534347,
+      "num_pieces": 8
+    },
+    {
+      "lane_idx": 1,
+      "x_top": 712,
+      "y_top": 300,
+      "x_bot": 309,
+      "y_bot": 600,
+      "x_center_at_mid_y": 508.5308108105204,
+      "num_pieces": 13
+    },
+    {
+      "lane_idx": 2,
+      "x_top": 795,
+      "y_top": 300,
+      "x_bot": 438,
+      "y_bot": 600,
+      "x_center_at_mid_y": 619.9418577697832,
+      "num_pieces": 5
+    }
+  ]
+}

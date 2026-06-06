@@ -1,0 +1,26 @@
+{
+  "video_id": "v01",
+  "method": "opencv_hough_dbscan",
+  "num_lanes_detected": 2,
+  "num_lanes_expected": 4,
+  "lanes": [
+    {
+      "lane_idx": 0,
+      "x_top": 832,
+      "y_top": 400,
+      "x_bot": 346,
+      "y_bot": 600,
+      "x_center_at_mid_y": 587.1805512234267,
+      "num_pieces": 16
+    },
+    {
+      "lane_idx": 1,
+      "x_top": 890,
+      "y_top": 400,
+      "x_bot": 458,
+      "y_bot": 600,
+      "x_center_at_mid_y": 674.0160332337693,
+      "num_pieces": 4
+    }
+  ]
+}

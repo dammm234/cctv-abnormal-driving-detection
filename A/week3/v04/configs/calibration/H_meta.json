@@ -1,0 +1,45 @@
+{
+  "video_id": "v04",
+  "video_file": "v04.mp4",
+  "src_pts": [
+    [
+      665.0,
+      220.0
+    ],
+    [
+      785.0,
+      220.0
+    ],
+    [
+      590.0,
+      400.0
+    ],
+    [
+      395.0,
+      400.0
+    ]
+  ],
+  "dst_pts": [
+    [
+      0.0,
+      20.0
+    ],
+    [
+      14.0,
+      20.0
+    ],
+    [
+      14.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "lane_width_m": 3.5,
+  "num_lanes": 4,
+  "road_width_m": 14.0,
+  "segment_length_m": 20.0,
+  "note": "4-lane city road (Seongsudaegyo direction), stopped vehicle lane excluded"
+}

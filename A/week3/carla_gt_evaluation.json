@@ -1,0 +1,87 @@
+{
+  "normal": {
+    "scenario": "normal",
+    "matched_count": 1276,
+    "detection_rate": 24.3047619047619,
+    "lane_accuracy": 100.0,
+    "avg_lateral_err": 0.15487209494061605,
+    "max_lateral_err": 1.114140525817871,
+    "avg_speed_err_kmh": 6.4775010346547655,
+    "max_speed_err_kmh": 32.45892236390989,
+    "vehicle_detection": {
+      "1": 30.0,
+      "2": 34.285714285714285,
+      "3": 28.19047619047619,
+      "4": 16.57142857142857,
+      "5": 12.476190476190476
+    }
+  },
+  "lane_weaving": {
+    "scenario": "lane_weaving",
+    "matched_count": 1271,
+    "detection_rate": 24.20952380952381,
+    "lane_accuracy": 100.0,
+    "avg_lateral_err": 0.17054946923424746,
+    "max_lateral_err": 1.1088161621093748,
+    "avg_speed_err_kmh": 7.871085489919633,
+    "max_speed_err_kmh": 35.59304193774754,
+    "vehicle_detection": {
+      "1": 9.80952380952381,
+      "2": 32.761904761904766,
+      "3": 29.619047619047617,
+      "4": 33.61904761904762,
+      "5": 15.238095238095239
+    }
+  },
+  "tailgating": {
+    "scenario": "tailgating",
+    "matched_count": 942,
+    "detection_rate": 17.942857142857143,
+    "lane_accuracy": 100.0,
+    "avg_lateral_err": 0.12719784136081705,
+    "max_lateral_err": 0.6966381607055663,
+    "avg_speed_err_kmh": 5.873438499940408,
+    "max_speed_err_kmh": 32.66414912109375,
+    "vehicle_detection": {
+      "1": 41.904761904761905,
+      "2": 11.904761904761903,
+      "3": 3.9047619047619047,
+      "4": 19.238095238095237,
+      "5": 12.761904761904763
+    }
+  },
+  "sudden_lane_change": {
+    "scenario": "sudden_lane_change",
+    "matched_count": 1180,
+    "detection_rate": 22.476190476190474,
+    "lane_accuracy": 99.91525423728814,
+    "avg_lateral_err": 0.23963305371817895,
+    "max_lateral_err": 1.497878074645996,
+    "avg_speed_err_kmh": 10.913272763644498,
+    "max_speed_err_kmh": 38.61220521312833,
+    "vehicle_detection": {
+      "1": 27.142857142857142,
+      "2": 25.9047619047619,
+      "3": 7.142857142857142,
+      "4": 44.952380952380956,
+      "5": 7.238095238095238
+    }
+  },
+  "speeding": {
+    "scenario": "speeding",
+    "matched_count": 1559,
+    "detection_rate": 29.695238095238093,
+    "lane_accuracy": 99.42270686337396,
+    "avg_lateral_err": 0.15488546753908444,
+    "max_lateral_err": 1.488938102722168,
+    "avg_speed_err_kmh": 12.911753396717113,
+    "max_speed_err_kmh": 48.88354280437532,
+    "vehicle_detection": {
+      "1": 24.571428571428573,
+      "2": 49.142857142857146,
+      "3": 18.0,
+      "4": 45.80952380952381,
+      "5": 10.952380952380953
+    }
+  }
+}

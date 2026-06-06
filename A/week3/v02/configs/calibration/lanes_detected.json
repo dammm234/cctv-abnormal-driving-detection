@@ -1,0 +1,56 @@
+{
+  "video_id": "v02",
+  "method": "opencv_hough_dbscan",
+  "angle_range": "40-60",
+  "num_lanes_detected": 3,
+  "num_lanes_expected": 7,
+  "note": "6차로 도로 환경에서 OpenCV 차선 검출 한계 확인. 여러 방법 시도(임계값 조정, 각도 범위 조정, 깨끗한 구간으로 road_only 재생성) 후에도 3개 차선만 검출됨. 원인: 6차로 넓은 도로 폭 + 영상 내 차선 간격 좁음 + 정체 환경. 호모그래피 기반 lane_id로 6차로 분석 정상 수행.",
+  "lanes": [
+    {
+      "lane_idx": 0,
+      "x_top": 742,
+      "y_top": 350,
+      "x_bot": 400,
+      "y_bot": 650,
+      "x_center_at_mid_y": 559.0403382807418,
+      "num_pieces": 9
+    },
+    {
+      "lane_idx": 1,
+      "x_top": 758,
+      "y_top": 350,
+      "x_bot": 540,
+      "y_bot": 650,
+      "x_center_at_mid_y": 649.4897497897393,
+      "num_pieces": 2
+    },
+    {
+      "lane_idx": 2,
+      "x_top": 787,
+      "y_top": 350,
+      "x_bot": 612,
+      "y_bot": 650,
+      "x_center_at_mid_y": 701.2730775518169,
+      "num_pieces": 4
+    }
+  ],
+  "reliability": "low",
+  "attempts": [
+    {
+      "method": "default (threshold 150, angle 40-60, eps 40)",
+      "result": "3 lanes, not parallel"
+    },
+    {
+      "method": "lower threshold (120)",
+      "result": "1 lane (worse)"
+    },
+    {
+      "method": "narrow angle (40-55) + eps 30",
+      "result": "2 lanes (worse)"
+    },
+    {
+      "method": "clean segment road_only (18-25s) + default params",
+      "result": "3 lanes (final)"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "suspects": [
+    {
+      "track_id": 12,
+      "reasons": [
+        "tailgating"
+      ],
+      "weaving_std": 0.289,
+      "lane_changes": 0,
+      "track_frames": 78
+    }
+  ],
+  "suspect_ids": [
+    12
+  ],
+  "summary": {
+    "tailgating": 1
+  },
+  "total_analyzed": 5,
+  "thresholds": {
+    "weaving_std": 0.3,
+    "lane_change": 1,
+    "tail_gap": 5.0,
+    "min_track_frames": 10
+  }
+}

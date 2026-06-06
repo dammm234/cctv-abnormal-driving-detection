@@ -1,0 +1,50 @@
+{
+  "video_id": "carla_all",
+  "note": "CARLA 5\uac1c \uc601\uc0c1 \uacf5\ud1b5 \ud638\ubaa8\uadf8\ub798\ud53c (\uc601\uc5ed \ud655\uc7a5 \ubc84\uc804)",
+  "src_pts": [
+    [
+      860.0,
+      560.0
+    ],
+    [
+      1085.0,
+      560.0
+    ],
+    [
+      1500.0,
+      1080.0
+    ],
+    [
+      530.0,
+      1080.0
+    ]
+  ],
+  "dst_pts": [
+    [
+      0.0,
+      50.0
+    ],
+    [
+      17.5,
+      50.0
+    ],
+    [
+      17.5,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ]
+  ],
+  "lane_width_m": 3.5,
+  "num_lanes": 5,
+  "road_width_m": 17.5,
+  "segment_length_m": 50.0,
+  "carla_info": {
+    "fps": 30,
+    "image_resolution": "1920x1080",
+    "anchor_lane": "lane 3 (GT lateral=0 \uc77c\uce58)",
+    "coord_transform": "A_x = B_lateral + 8.75"
+  }
+}
