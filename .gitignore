@@ -1,0 +1,87 @@
+# ============================================================
+# git 루트(B_for_github)용 .gitignore
+# 무거운 데이터·가중치·생성물 제외, 코드/핵심문서만 추적
+# ============================================================
+
+# ===== 데이터셋 (VeRi-776 학습 이미지, ~9.6GB) =====
+archive/
+**/archive/
+**/VeRi/
+*.zip
+*.tar
+*.tar.gz
+B.zip
+
+# ===== 모든 이미지 (학습 jpg, 프레임 png 등) =====
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.gif
+
+# ===== CARLA 시나리오 데이터 =====
+data/scenarios/
+**/data/scenarios/
+data/real/
+**/data/real/
+scenarios_v1.1*/
+**/scenarios_v1.1*/
+
+# ===== 모델 가중치 & 학습 로그 =====
+log/
+**/log/
+*.pth
+*.pth.tar*
+*.pt
+*.ckpt
+*.bin
+
+# ===== ReID feature =====
+reid_features*/
+**/reid_features*/
+*.npz
+
+# ===== 데모 영상 =====
+demo_videos/
+**/demo_videos/
+reid_videos/
+**/reid_videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# ===== 생성된 결과 (코드로 재생성 가능) =====
+*_results.json
+*_result.json
+*_report.md
+# 단, 핵심 문서는 추적 (예외)
+!week4_report.md
+!reid_README.md
+!README.md
+!PROJECT_CONTEXT.md
+
+# ===== 중복/실수 파일 =====
+B/gitignore
+**/gitignore
+
+# ===== Python 캐시 =====
+*.pyc
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== 로그/임시 =====
+*.log
+tmp/
+temp/
