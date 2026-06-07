@@ -193,6 +193,7 @@ driving2/
 | `v{ID}/outputs/test_tracks_v1.1.json` | 영상별 핵심 데이터 |
 | `v{ID}/outputs/reports/validation_v{ID}.md` | 영상별 검증 보고서 |
 | `carla_gt_evaluation.json` | CARLA GT 비교 결과 |
+| `ac_integration_report.md` | A+C 통합 시스템 평가 (CARLA GT 검증 + CCTV 임계값 분석) |
 
 ## 시스템 강점
 
