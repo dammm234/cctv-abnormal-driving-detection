@@ -1,15 +1,5 @@
 """
 단조 증가의 통계적 유의성 검증.
-
-문제: 현재 "wobble mild 1.10m → medium 2.32m → strong 3.02m" 같은 단조 증가는
-단일 측정값 비교. 통계적 유의성 검증 없음 → "엉성하다" 피드백의 원인.
-
-해결: 각 시나리오를 sliding window로 다수 샘플로 변환 후
-1. One-way ANOVA (3개 그룹 차이 검정)
-2. Pairwise t-test (mild vs medium, medium vs strong)
-3. Cohen's d (효과 크기)
-
-근거: 검증된 통계 방법 표준 (Cohen 1988, Welch 1947, Fisher 1925).
 """
 import argparse
 import json
