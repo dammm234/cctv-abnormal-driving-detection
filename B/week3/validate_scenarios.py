@@ -3,7 +3,6 @@
 
 - 8 시나리오 각각의 lateral_offset_m, speed_est_mps 시계열 추출
 - 강도별 단조 증가 검증 (mild < medium < strong)
-- 발표용 시각화 생성
 
 출력:
 - scenarios_validation.png: 시각화
