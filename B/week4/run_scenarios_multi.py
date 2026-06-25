@@ -1,22 +1,11 @@
 """
-다중 차량 ReID 시나리오 생성기 (run_scenarios.py 기반)
-
-기존 run_scenarios.py는 단일 차량 전제. 본 스크립트는:
-- 서로 다른 외형(blueprint + 색)의 차량 N대를 spawn
-- 전 차량 autopilot 직진 (ReID는 외형 매칭만 보면 되므로 이상행동 불필요)
-- 각 차량의 CARLA 3D bounding box를 각 카메라로 투영 → 2D bbox_pixel 계산
-- GT(ground_truth.jsonl)에 차량별 id + 카메라별 bbox_pixel 기록
-- 동시에 v1.1 JSON (cam별 track_id + bbox_pixel) 직접 출력
-
-→ reid_extract_features.py가 그대로 읽을 수 있음.
+다중 차량 ReID 시나리오 생성기
 
 사용:
     conda activate carla37
     cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
     python run_scenarios_multi.py --n-vehicles 6 --duration 250
 
-먼저 1~2대로 bbox 투영이 정확한지 검증 후 N대로 늘릴 것:
-    python run_scenarios_multi.py --n-vehicles 2 --duration 60 --name multi_test
 """
 import argparse
 import json
