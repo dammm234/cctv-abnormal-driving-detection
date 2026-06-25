@@ -4,18 +4,6 @@ Step D: 시나리오 배치 실행기
 config/scenarios.yaml에 정의된 모든 시나리오를 일괄 실행하여
 data/scenarios/{name}/ 폴더에 PNG + ground_truth.jsonl + scenario_config.yaml 저장.
 
-성능 최적화:
-- Town06 한 번만 로드
-- 카메라 한 번만 spawn (시나리오 간 재사용)
-- Sync mode 한 번만 켜고 끄기
-- 시나리오 사이엔 차량만 spawn/destroy
-
-사용:
-    conda activate carla37
-    cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
-    python run_scenarios.py
-
-특정 시나리오만 실행: scenarios.yaml에서 enabled: false 로 설정
 """
 import json
 import math
