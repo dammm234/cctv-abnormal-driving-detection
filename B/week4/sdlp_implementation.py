@@ -1,13 +1,6 @@
 """
 SDLP (Standard Deviation of Lateral Position) 정식 구현.
 
-근거: Verster, J. C., & Roth, T. (2011). Standard operation procedures for
-conducting the on-the-road driving test, and measurement of the standard
-deviation of lateral position (SDLP). International Journal of General Medicine.
-
-SDLP는 음주 운전 평가에서 가장 검증된 단일 메트릭. 
-혈중알코올농도 0.05% 음주자는 SDLP가 평균 0.4m 증가 [Verster & Roth 2011].
-
 본 모듈은:
 1. 정식 SDLP 계산 (detrending 포함)
 2. 시간 윈도우별 SDLP (sliding window)
