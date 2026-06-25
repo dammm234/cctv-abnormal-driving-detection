@@ -3,9 +3,6 @@
 시나리오 라벨링 재정렬.
 
 
-사용:
-    cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
-    python relabel_scenarios.py
 """
 import json
 import os
