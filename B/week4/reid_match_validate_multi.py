@@ -3,14 +3,6 @@ ReID 모듈 (다중 차량) - Cross-Camera 매칭 + 헝가리안 할당 + GT 검
 
 단일 차량용 reid_match_validate.py를 다중 차량으로 재작성.
 
-기존과의 차이:
-- 단일 차량 가정 제거 (모든 조합 = TP 라는 가정 폐기)
-- 카메라 쌍마다 N×M 유사도 행렬 → 헝가리안 1:1 최적 할당
-  (scipy.optimize.linear_sum_assignment)
-- threshold 미만 매칭은 reject (gating)
-- GT: CARLA track_id가 양쪽 카메라에서 같으면 정답 매칭
-  → 다중 차량이므로 "같은 id끼리 매칭됐는가"로 TP/FP/FN 채점
-
 입력:
 - reid_features_multi/{시나리오}.npz
     키: '{cam}_track_{track_id}_feature'  (reid_extract_features.py 출력)
@@ -26,9 +18,6 @@ ReID 모듈 (다중 차량) - Cross-Camera 매칭 + 헝가리안 할당 + GT 검
 - FP: 예측 매칭인데 id가 다름
 - FN: GT 매칭인데 예측 못 함 (할당 안 됐거나 threshold 미달)
 
-근거:
-- Kuhn (1955) Hungarian algorithm.
-- Zhou et al. (2019) OSNet. / Hsu et al. (2021) MTMC tracking.
 """
 import argparse
 import json
