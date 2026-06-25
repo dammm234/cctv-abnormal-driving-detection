@@ -125,7 +125,6 @@ def make_behavior(behavior_type, target_y=None):
         raise ValueError(f'Unknown behavior: {behavior_type}')
 
 
-# ============ Utility ============
 
 def load_config():
     with open(CONFIG_PATH, encoding='utf-8') as f:
