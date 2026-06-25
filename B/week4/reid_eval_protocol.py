@@ -1,16 +1,6 @@
 """
 ReID 표준 평가 프로토콜: mAP + CMC Rank-k (query-gallery retrieval)
 
-근거:
-- Liu et al. (2016) VeRi-776 cross-camera retrieval 프로토콜.
-- Luo et al. (CVPR 2019) "Bag of Tricks": ResNet50 글로벌 feature +
-  코사인 거리 평가, mAP / CMC 표준 지표.
-- Zheng et al. (2015) Market-1501: cross-camera 평가 규칙
-  (query와 같은 카메라의 gallery 샘플은 junk로 제외).
-
-본 모듈은 학습을 하지 않는다. reid_extract_features.py가 뽑은
-track 단위 feature를 그대로 사용해 retrieval 지표만 계산한다.
-
 평가 단위:
 - 각 (camera, track_id) = 하나의 sample, feature 1개.
 - query를 각 sample로 순회.
