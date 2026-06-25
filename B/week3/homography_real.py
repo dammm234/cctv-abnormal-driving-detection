@@ -4,10 +4,6 @@ Step (B-2): 실제 CCTV 영상의 4점 대응 호모그래피
 영상에서 프레임 추출 → 사용자가 도로 위 4점 클릭 → 한국 고속도로 표준 치수로
 OpenCV findHomography로 픽셀↔월드 변환 매트릭스 계산.
 
-한국 고속도로 표준 치수 (도로교통법 시행규칙 기준):
-- 차선 폭: 3.5m
-- 점선 주기: 13m (5m 칠 + 8m 빈)
-- 본 모듈은 기본값으로 폭 3.5m × 길이 13m 사각형 사용
 
 사용법:
     python homography_real.py clip01_gumi_view1
@@ -18,8 +14,6 @@ OpenCV findHomography로 픽셀↔월드 변환 매트릭스 계산.
   --width: 4점이 이루는 사각형의 폭 (m, default 3.5)
   --length: 사각형의 길이 (m, default 13)
 
-설치:
-    pip install opencv-python
 
 출력:
     data/real/{clip}_frame.png            (추출된 프레임)
