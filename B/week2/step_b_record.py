@@ -8,18 +8,6 @@ Step A에서 검증된 sync mode 위에 다음을 쌓아서 검증:
 - 카메라별 폴더에 같은 frame_idx로 PNG 저장
 - 차량 1대 autopilot으로 진행 (cam0 → cam1 → cam2 통과)
 - 10초간(200 tick @ 20fps) 녹화
-
-사용:
-    conda activate carla37
-    cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
-    python step_b_record.py
-
-출력:
-    data/scenarios/step_b_test/
-    ├── cam0/000000.png ~ 000199.png
-    ├── cam1/000000.png ~ 000199.png
-    ├── cam2/000000.png ~ 000199.png
-    └── ground_truth.jsonl
 """
 import json
 import math
