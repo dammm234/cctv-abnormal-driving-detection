@@ -1,8 +1,6 @@
 """
 Step G: 차량 trajectory 클러스터링 모듈
 
-1주차 결정 보고서대로 UFLDv2 차선 검출 대신 차량 trajectory 군집화로 차선 가설 도출.
-
 알고리즘:
 1. 차량 ID별로 검출/관측을 묶어 trajectory 생성
 2. 너무 짧은 trajectory 필터링
@@ -16,14 +14,6 @@ Step G: 차량 trajectory 클러스터링 모듈
   (image space, 픽셀 좌표)
 - CARLA ground_truth.jsonl: world coordinates (미터)
 - 같은 알고리즘이 양쪽 다 동작 (거리 단위만 다름)
-
-2주차 개발 테스트는 CARLA ground truth로. A의 실제 CSV 받으면 입력만 갈아끼움.
-
-설치 (없을 경우):
-    pip install scikit-learn matplotlib
-
-사용:
-    python trajectory_clustering.py
 
 출력:
     data/lane_hypotheses.json      (클러스터링 결과)
