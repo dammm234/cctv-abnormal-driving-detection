@@ -24,7 +24,6 @@ CAMERA_IDS = ['cam0', 'cam1', 'cam2']
 TIMEOUT_PER_TICK = 5.0
 
 
-# ============ Behavior 클래스들 ============
 
 class BehaviorController:
     def __init__(self, target_speed_kmh=60.0):
@@ -79,7 +78,7 @@ class AbruptBehavior(BehaviorController):
 
 class NormalBehavior(BehaviorController):
     def get_control(self, t, vehicle_state):
-        return None  # autopilot 사용 신호
+        return None 
 
 
 def make_behavior(scenario, defaults, target_y=None):
@@ -109,7 +108,7 @@ def make_behavior(scenario, defaults, target_y=None):
         raise ValueError(f'Unknown behavior: {behavior_type}')
 
 
-# ============ Setup 유틸 ============
+
 
 def load_yaml(path):
     with open(path, encoding='utf-8') as f:
@@ -207,7 +206,6 @@ def drain_queues(queues):
                 break
 
 
-# ============ 시나리오 단일 실행 ============
 
 def run_one_scenario(world, cameras, queues, scenario, defaults,
                      cameras_cfg, tm_port):
@@ -383,7 +381,6 @@ def run_one_scenario(world, cameras, queues, scenario, defaults,
     return result
 
 
-# ============ Main ============
 
 def main():
     print('=' * 70)
@@ -501,7 +498,6 @@ def main():
             for r in failed:
                 print(f'  {r["name"]}: {r.get("error", "?")}')
 
-        # 디스크 사용량 추정
         print()
         total_size_mb = 0
         for r in successful:
