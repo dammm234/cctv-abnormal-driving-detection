@@ -4,9 +4,6 @@ cameras.yaml에 정의된 카메라 위치에서 각각 1장씩 PNG로 캡처.
 cameras.yaml 편집 → 이 스크립트 실행 → camera_check/cam*.png를 열어 확인.
 도로 위치, 차선 가시성, 인접 카메라 시야 겹침을 점검할 수 있음.
 
-사용:
-    python camera_test_capture.py
-    python camera_test_capture.py --config config/cameras.yaml --out camera_check
 """
 import argparse
 import os
