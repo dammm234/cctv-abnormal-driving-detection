@@ -26,9 +26,9 @@ N_TICKS = 250                     # 12.5초
 TARGET_SPEED_KMH = 60.0
 
 # Wobble 파라미터 (수정)
-WOBBLE_AMPLITUDE = 0.04           # 0.08 → 0.04 (절반으로 축소)
+WOBBLE_AMPLITUDE = 0.04           
 WOBBLE_PERIOD = 2.0
-LANE_CORRECTION_GAIN = 0.025      # 차선 유지 보정 강도 (새로 추가)
+LANE_CORRECTION_GAIN = 0.025      # 차선 유지 보정 강도
 
 # Abrupt 파라미터
 ABRUPT_PERIOD = 4.0
@@ -199,8 +199,6 @@ def set_initial_velocity(vehicle, speed_kmh):
     vy = speed_ms * math.sin(yaw_rad)
     vehicle.set_target_velocity(carla.Vector3D(x=vx, y=vy, z=0.0))
 
-
-# ============ Main ============
 
 def main():
     print('=' * 60)
