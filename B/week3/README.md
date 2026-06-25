@@ -55,17 +55,6 @@ OpenCV `cv2.findHomography`로 4점 대응 기반.
 
 **sample1 결과** (보류): P1-P2 vs P3-P4 비율이 1:1에 가까움 → 4점이 실제 사각형이 아닐 가능성. 4주차 데모는 sample2 우선.
 
-## Role A 통합 (예정)
-
-A가 GitHub에 `schema_v1.1.md` 공개. v1.1 포맷 확인 후 `trajectory_clustering.py`의 입력 어댑터 작성:
-
-```python
-# trajectory_clustering.py에 추가
-def load_trajectories_from_role_a(json_path):
-    """A의 v1.1 JSON 포맷 → 우리 trajectory 형식."""
-    ...
-```
-
 ## 사용 방법
 
 ```bash
@@ -83,8 +72,3 @@ python homography_real.py sample2
 python homography_real.py sample1 --width 7.0 --length 13.0
 ```
 
-## 다음 주 (4주차)
-
-1. 8 시나리오 + 실제 CCTV sample 2개에 전체 파이프라인 적용
-2. 강도별 메트릭 점수 단조 검증
-3. 최종 보고서 작성
