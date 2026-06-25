@@ -63,32 +63,5 @@
 
 검증: 8개 CARLA 시나리오 trajectory 입력 → 모두 lane 0으로 정상 클러스터링, noise 0개.
 
-## 핵심 발견 사항
 
-### Wobble 강도는 amplitude × period² 에 의존
 
-첫 batch 결과에서 "mild"가 가장 큰 차선 이탈을 보이는 역전 현상 발견. 이론적 분석 결과 lateral 변위 ∝ amplitude × period². `relabel_scenarios.py`로 자동 재정렬.
-
-### Modified Hausdorff의 trajectory 길이 민감성
-
-abrupt_mild ↔ abrupt_strong이 3.18m로 가장 멈 — 평균 속도 차이로 trajectory 총 길이가 다름 (162m vs 191m). 현 데이터에선 DBSCAN density chain으로 흡수, 향후 실제 CCTV에선 DTW 검토 가능.
-
-## 사용 방법
-
-```bash
-conda activate carla37
-cd path/to/strange_drive
-
-# 1. 시나리오 양산 (CARLA 서버 실행 필요, ~70분 소요)
-python run_scenarios.py
-
-# 2. 라벨 정합성 보정 (선택)
-python relabel_scenarios.py
-
-# 3. trajectory 클러스터링 (CARLA 불필요)
-python trajectory_clustering.py
-```
-
-## 다음 주
-
-`week3/`에서 호모그래피 캘리브레이션 + Role A 통합.
