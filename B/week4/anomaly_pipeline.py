@@ -14,12 +14,6 @@
    - PTE: smoothed trajectory 대비 고주파 흔들림 → wobble
    - lateral_span: 횡방향 총 변위 → 차선 변경/이탈
 4. 판정: 임계 기준 normal / lane_change / wobble.
-
-사용:
-    python anomaly_pipeline.py \
-        --reid-results reid_multi_results.json \
-        --json-dir scenarios_v1.1_multi \
-        --scenario multi_reid
 """
 import argparse
 import json
