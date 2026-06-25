@@ -4,17 +4,6 @@ Step (B-2): 실제 CCTV 영상의 4점 대응 호모그래피
 영상에서 프레임 추출 → 사용자가 도로 위 4점 클릭 → 한국 고속도로 표준 치수로
 OpenCV findHomography로 픽셀↔월드 변환 매트릭스 계산.
 
-
-사용법:
-    python homography_real.py clip01_gumi_view1
-    python homography_real.py clip02_gumi_view2 --frame 90
-    python homography_real.py clip01_gumi_view1 --width 3.5 --length 26
-
-  --frame: 추출할 프레임 인덱스 (default 30)
-  --width: 4점이 이루는 사각형의 폭 (m, default 3.5)
-  --length: 사각형의 길이 (m, default 13)
-
-
 출력:
     data/real/{clip}_frame.png            (추출된 프레임)
     config/homography_real_{clip}.json    (호모그래피 매트릭스)
