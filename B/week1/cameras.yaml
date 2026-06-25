@@ -1,16 +1,4 @@
 # Town06 직선 본선 구간의 다중 CCTV 위치 설정.
-#
-# 작업 순서:
-#   1. spectator_watch.py로 spectator 좌표를 확인
-#   2. 아래 location/rotation 값을 실제 좌표로 교체
-#   3. camera_test_capture.py 실행하여 PNG 확인
-#   4. 필요하면 yaw, pitch를 5~10도 단위로 조정 후 재캡처
-#
-# 좌표계:
-#   - location: (x, y, z) 미터 단위
-#   - rotation: (pitch, yaw, roll) 도 단위
-#   - CARLA의 yaw 기준: +X축이 0도, +Y축이 90도
-#   - 차량이 +X 방향으로 진행 → 카메라 yaw=180 (차량을 마주봄)
 
 map: Town06
 fov: 90
