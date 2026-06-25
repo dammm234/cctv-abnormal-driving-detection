@@ -1,18 +1,7 @@
 """
-relabel_scenarios.py
 
 시나리오 라벨링 재정렬.
 
-run_scenarios.py 실행 결과 wobble의 강도 ordering이 의도와 거꾸로 나옴을 발견.
-원인: lateral displacement가 amplitude × period²에 비례. 우리는 amplitude만 늘리고
-period는 줄였기에 결과적으로 "mild" 파라미터가 가장 강한 wobble 생성.
-
-해결:
-- wobble_mild ↔ wobble_strong 폴더 swap
-- abrupt_slow → abrupt_strong, abrupt_fast → abrupt_mild (이름 일관성)
-- 각 폴더 내부 scenario_config.yaml의 name 필드 업데이트
-- 각 폴더 내부 ground_truth.jsonl의 scenario 필드 업데이트
-- config/scenarios.yaml의 시나리오 정의도 함께 업데이트
 
 사용:
     cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
