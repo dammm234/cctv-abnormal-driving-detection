@@ -12,8 +12,6 @@ anomaly_pipeline의 판정 결과를 각 카메라 영상에 오버레이:
 3카메라를 가로로 붙이지 않고 cam0/cam1/cam2 각각 별도 mp4로 생성한다.
 → 각 화면이 풀 해상도라 라벨이 크고 잘 보인다.
 
-anomaly_pipeline.py의 글로벌 ID 매핑/판정 로직을 그대로 재사용한다.
-(같은 폴더에 anomaly_pipeline.py 必要)
 
 사용:
     python anomaly_demo_video.py \
