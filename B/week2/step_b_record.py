@@ -255,7 +255,7 @@ def main():
         if len(gt_lines) != N_TICKS:
             all_pass = False
 
-        # 2. 카메라 간 carla_frame 일치 검증 (가장 중요)
+        # 2. 카메라 간 carla_frame 일치 검증 
         print('\n카메라 간 동기 검증 (carla_frame 일치):')
         sync_violations = 0
         complete_ticks = 0
@@ -280,7 +280,7 @@ def main():
         if sync_violations > 0:
             all_pass = False
 
-        # 3. 차량이 각 카메라를 지나갔는지 (거리 기준)
+        # 3. 차량이 각 카메라를 지나갔는지 
         print('\n차량 통과 검증 (최단 거리 기준):')
         min_distances = {cam_id: float('inf') for cam_id in CAMERA_IDS}
         for line in gt_lines:
