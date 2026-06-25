@@ -1,5 +1,5 @@
 """
-ReID 모듈 - Step 1: Feature 추출
+ReID 모듈 - Feature 추출
 
 CARLA 8 시나리오 × 3 카메라의 각 차량 bbox crop에서 ReID feature 추출.
 
@@ -12,12 +12,8 @@ CARLA 8 시나리오 × 3 카메라의 각 차량 bbox crop에서 ReID feature �
   각 tracklet의 평균 feature vector (512-dim)
 
 사용 모델:
-- 1순위: torchreid의 OSNet (Zhou et al. ICCV 2019)
-- 2순위 (fallback): torchvision의 ResNet50 + GAP
+- torchreid의 OSNet
 
-근거:
-- OSNet [16]: 차량 ReID에서 강력한 다중 스케일 특징
-- VeRi-776 데이터셋으로 사전 학습 가중치 사용 가능
 """
 import argparse
 import json
