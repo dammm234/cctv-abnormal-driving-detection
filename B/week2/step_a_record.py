@@ -9,15 +9,6 @@ Sync mode 위에 다음 요소들을 쌓아서 검증:
 - ground_truth.jsonl에 매 tick 차량 정보 기록
 - Sync mode + Traffic Manager 정상 해제
 
-사용:
-    conda activate carla37
-    cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
-    python step_a_record.py
-
-출력:
-    data/scenarios/step_a_test/
-    ├── cam0/000000.png ~ 000099.png
-    └── ground_truth.jsonl
 """
 import json
 import math
