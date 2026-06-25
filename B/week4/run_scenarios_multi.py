@@ -1,11 +1,6 @@
 """
 다중 차량 ReID 시나리오 생성기
 
-사용:
-    conda activate carla37
-    cd D:\\CARLA_0.9.14\\WindowsNoEditor\\PythonAPI\\strange_drive
-    python run_scenarios_multi.py --n-vehicles 6 --duration 250
-
 """
 import argparse
 import json
