@@ -42,7 +42,6 @@ MIN_TRAJECTORY_POINTS = 10 # 이보다 짧은 trajectory는 버림
 # ==========================================
 
 
-# ============ Data Loading ============
 
 def load_trajectories_from_carla(scenarios_dir):
     """CARLA ground_truth.jsonl에서 trajectory 로드.
@@ -124,7 +123,6 @@ def load_trajectories_from_csv(csv_path):
     return trajectories
 
 
-# ============ Trajectory Preprocessing ============
 
 def resample_trajectory(points, n_samples=50):
     """trajectory를 arc length 기준 균일 리샘플링.
@@ -147,7 +145,6 @@ def resample_trajectory(points, n_samples=50):
     return np.column_stack([new_x, new_y])
 
 
-# ============ Distance Metric ============
 
 def modified_hausdorff(traj_a, traj_b):
     """대칭 modified Hausdorff distance.
@@ -157,7 +154,6 @@ def modified_hausdorff(traj_a, traj_b):
     대칭: max(h(A,B), h(B,A))
     
     Reference: Dubuisson & Jain (1994)"""
-    # Pairwise distance matrix (na, nb)
     diffs = traj_a[:, np.newaxis, :] - traj_b[np.newaxis, :, :]
     dist_matrix = np.sqrt((diffs ** 2).sum(axis=2))
 
@@ -178,7 +174,6 @@ def compute_distance_matrix(trajectories):
     return D
 
 
-# ============ Clustering ============
 
 def cluster_trajectories(distance_matrix, eps=2.0, min_samples=2):
     """DBSCAN으로 trajectory 클러스터링.
@@ -210,7 +205,6 @@ def extract_lane_centerlines(resampled_trajectories, labels):
     return centerlines
 
 
-# ============ Visualization ============
 
 def visualize(traj_data, resampled, labels, centerlines, output_path):
     """trajectory와 클러스터링 결과를 한 장에 시각화."""
@@ -256,7 +250,6 @@ def visualize(traj_data, resampled, labels, centerlines, output_path):
     plt.close()
 
 
-# ============ Main ============
 
 def main():
     print('=' * 60)
