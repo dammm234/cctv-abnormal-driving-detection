@@ -6,11 +6,6 @@ A의 schema_v1.1.md 규격에 맞춰 변환.
 
 출력: scenarios_v1.1/{시나리오명}_cam{0,1,2}.json (총 24개)
 
-A의 v1.1 스키마와 동일:
-- version, fps, total_frames, frames[]
-- frames[].vehicles[]: track_id, bbox_pixel, position_road_m,
-                       lane_id, lateral_offset_m, speed_est_mps
-
 CARLA 좌표계 → 도로 좌표계 변환:
 - CARLA 차량은 -X 방향으로 진행
 - target_y가 차로 중심 (예: -17.54)
