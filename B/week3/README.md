@@ -1,6 +1,5 @@
-# Week 3 — 호모그래피 캘리브레이션 + Role A 통합
+# Week 3 — 호모그래피 캘리브레이션
 
-## 진행 중인 작업
 
 1. **(A) CARLA 호모그래피** ✓ 완료
 2. **(B) 실제 CCTV 호모그래피** ✓ sample2 완료 (sample1 보류)
@@ -51,24 +50,8 @@ OpenCV `cv2.findHomography`로 4점 대응 기반.
 3. 한국 고속도로 표준 (차선 폭 3.5m, 점선 주기 13m)으로 H 계산
 4. 1m 격자를 픽셀로 투영하여 정렬 검증
 
-**sample2 결과**: P1-P2 픽셀 차이 314px, P3-P4는 116px → perspective 비율 2.7. 정상.
+sample2 결과: P1-P2 픽셀 차이 314px, P3-P4는 116px → perspective 비율 2.7. 정상.
 
-**sample1 결과** (보류): P1-P2 vs P3-P4 비율이 1:1에 가까움 → 4점이 실제 사각형이 아닐 가능성. 4주차 데모는 sample2 우선.
+sample1 결과 : P1-P2 vs P3-P4 비율이 1:1에 가까움 → 4점이 실제 사각형이 아닐 가능성. 4주차 데모는 sample2 우선.
 
-## 사용 방법
-
-```bash
-conda activate carla37
-cd path/to/strange_drive
-
-# 1. CARLA 호모그래피 (CARLA 서버 불필요)
-python homography.py
-
-# 2. 실제 CCTV 호모그래피 (영상 필요, 4점 클릭)
-python homography_real.py sample1
-python homography_real.py sample2
-
-# 옵션: 폭 변경 가능
-python homography_real.py sample1 --width 7.0 --length 13.0
-```
 
