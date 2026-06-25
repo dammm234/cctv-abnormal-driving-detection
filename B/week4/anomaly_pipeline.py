@@ -4,7 +4,7 @@
 흩어진 부품을 하나로 연결:
   ReID(카메라 간 차량 연결) → 횡방향 궤적 수집 → 이상 메트릭(PTE/변위) → 판정
 
-흐름:
+파이프라인:
 1. ReID 매칭 결과(reid_multi_results.json)로 글로벌 차량 ID 구성.
    - "cam0:track_a ↔ cam1:track_b" 매칭들을 union-find로 묶어
      같은 실제 차량을 하나의 global_id로.
@@ -14,9 +14,6 @@
    - PTE: smoothed trajectory 대비 고주파 흔들림 → wobble
    - lateral_span: 횡방향 총 변위 → 차선 변경/이탈
 4. 판정: 임계 기준 normal / lane_change / wobble.
-
-주의: 본 파이프라인은 차량을 카메라 간 '연결'하는 것이 목적이므로
-ReID 순위 품질(mAP)이 아니라 1:1 매칭 결과(헝가리안)를 사용한다.
 
 사용:
     python anomaly_pipeline.py \
