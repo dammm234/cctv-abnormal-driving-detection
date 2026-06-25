@@ -5,10 +5,6 @@ CARLA 창에서 WASD로 비행하면서 좋은 카메라 위치를 찾을 때 �
 마음에 드는 위치에서 멈추면 터미널에 좌표가 찍히고, 그 값을
 cameras.yaml에 입력하면 됨.
 
-사용:
-    python spectator_watch.py
-종료:
-    Ctrl+C
 """
 import argparse
 import time
