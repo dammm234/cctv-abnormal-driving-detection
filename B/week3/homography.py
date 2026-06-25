@@ -1,5 +1,5 @@
 """
-Step (B-1): CARLA 카메라 호모그래피 계산 및 검증
+CARLA 카메라 호모그래피 계산 및 검증
 
 CARLA cameras.yaml의 FOV, 이미지 크기, 위치, 회전 정보로부터
 다음 매트릭스 자동 계산:
@@ -21,9 +21,6 @@ OpenCV 카메라 좌표 (투영 시 사용):
 검증:
   wobble_strong 시나리오의 ground truth 차량 위치를 각 카메라로 투영하여
   실제 PNG 위에 trajectory 시각화. 투영된 점들이 실제 차량 위치와 일치하면 통과.
-
-사용:
-    python homography.py
 
 출력:
     config/homography_carla.json
