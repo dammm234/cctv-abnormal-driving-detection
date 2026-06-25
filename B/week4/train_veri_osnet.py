@@ -7,11 +7,6 @@ VeRi를 커스텀 ImageDataset으로 직접 등록한다.
 VeRi 파일명 형식: {vehicleID}_c{cameraID}_{timestamp}_{seq}.jpg
   예: 0543_c009_00000135_0.jpg -> pid=543, camid=9
 
-사용:
-  conda activate reid
-  cd (week4 폴더)
-  python train_veri_osnet.py
-
 출력: log/osnet_veri/model/model.pth.tar-60
 """
 import os
