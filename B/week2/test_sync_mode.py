@@ -7,16 +7,12 @@ CARLA Synchronous mode 검증 스크립트.
   3. 종료 시 sync mode가 정상적으로 해제되는가
 
 사용:
-  1. CARLA 서버를 띄움 (CarlaUE4.exe)
+  1. CARLA 서버를 띄움
   2. 별도 터미널에서 이 스크립트 실행:
        conda activate carla37
        python test_sync_mode.py
 
-  결과 PNG는 sync_test_frames/ 폴더에 저장됨.
 
-주의:
-  스크립트가 중간에 실패해도 finally 블록이 sync mode를 해제해줌.
-  그래도 만약 서버가 hang됐다면 CARLA 서버 재시작이 안전함.
 """
 import os
 import queue
